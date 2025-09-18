@@ -1,0 +1,125 @@
+/* Container */
+.infra-section {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+  overflow: hidden; /* prevents any stray overflow */
+}
+
+/* Title */
+.infra-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #222;
+  display: inline-block;
+}
+
+.infra-title::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 80px;
+  background: #f2c200;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* slider wrapper ensures no horizontal scroll */
+.infra-slider-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 12px; /* keeps small gap on small screens */
+  box-sizing: border-box;
+}
+
+/* react-slick overrides */
+.slick-list {
+  overflow: hidden; /* essential to avoid overflow */
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+/* each slide */
+.infra-slide {
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* image */
+.infra-slide img {
+  width: 100%;
+  max-width: 100%;
+  height: 55vh;            /* responsive height */
+  max-height: 520px;      /* limit for very large screens */
+  min-height: 180px;      /* prevents collapsing on very small screens */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.45s ease, opacity 0.45s ease, box-shadow 0.45s ease;
+  display: block;
+}
+
+/* dim non-center slides and slightly shrink them to emphasize center */
+.slick-slide:not(.slick-center) img {
+  opacity: 0.65;
+  transform: scale(0.98);
+  filter: saturate(0.92);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.slick-center img {
+  opacity: 1;
+  transform: scale(1.02);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+
+/* arrow buttons */
+.infra-arrows {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.arrow-btn {
+  background: #f2c200;
+  border: none;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.arrow-btn:hover {
+  transform: scale(1.08);
+  background: #d9a900;
+}
+
+/* responsive heights */
+@media (max-width: 1024px) {
+  .infra-slide img { height: 44vh; max-height: 420px; }
+}
+
+@media (max-width: 768px) {
+  .infra-slide img { height: 36vh; max-height: 360px; }
+  .infra-title { font-size: 26px; }
+  .infra-slider-wrap { padding: 0 6px; }
+}
+
+@media (max-width: 480px) {
+  .infra-slide img { height: 30vh; max-height: 300px; }
+  .arrow-btn { padding: 10px 12px; font-size: 16px; }
+}

@@ -1,0 +1,41 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* responsive height based on viewport */
+  max-height: 600px; /* optional limit for large screens */
+  min-height: 250px; /* ensures it's not too small on mobile */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: left 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+.slide.active {
+  left: 0;
+  opacity: 1;
+}
+
+/* ✅ Mobile optimization */
+@media (max-width: 768px) {
+  .slider {
+    height: 40vh; /* reduce height on tablets/mobiles */
+    min-height: 200px;
+  }
+}
+
+/* ✅ Very small devices */
+@media (max-width: 480px) {
+  .slider {
+    height: 30vh;
+    min-height: 180px;
+  }
+}
