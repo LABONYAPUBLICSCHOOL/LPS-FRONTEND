@@ -1,65 +1,55 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 import "./ContactPage.css";
-import {
-  FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaUser,
-  FaCalendarAlt,
-  FaUsers,
-  FaWhatsapp,
-  FaClock,
-  FaInfoCircle,
-} from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser, FaCalendarAlt, FaUsers, FaWhatsapp, FaClock, FaInfoCircle } from "react-icons/fa";
 
 function ContactPage() {
+  const [formData, setFormData] = useState({
+    studentName: "",
+    dob: "",
+    parentsName: "",
+    phone: "",
+    whatsapp: "",
+    email: "",
+    tourTime: "",
+    infoSource: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic would go here
+    console.log(formData);
+    alert("Thank you for your submission! We'll contact you soon.");
+  };
+
   return (
     <section className="contact-container">
       {/* LEFT SIDE */}
-      <motion.div
-        className="contact-left"
-        initial={{ opacity: 0, x: -80 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="contact-left">
         <h2 className="contact-heading">Connect with us</h2>
-        <p className="contact-sub">We’d love to hear from you!</p>
+        <p className="contact-sub">We'd love to hear from you!</p>
 
         <div className="contact-info">
-          <p>
-            <FaMapMarkerAlt /> 375, Prince Anwar Shah Road, Kolkata, India
-          </p>
-          <p>
-            <FaPhoneAlt /> +91 83368 15657
-          </p>
-          <p>
-            <FaEnvelope /> admissions@scis.co.in
-          </p>
+          <p><FaMapMarkerAlt className="contact-icon" /> 375, Prince Anwar Shah Road, Kolkata, India, West Bengal</p>
+          <p><FaPhoneAlt className="contact-icon" /> +91 83368 15657</p>
+          <p><FaEnvelope className="contact-icon" /> admissions@scis.co.in</p>
         </div>
 
         <div className="contact-info">
-          <p>
-            <FaPhoneAlt /> 033 4007 2000
-          </p>
-          <p>
-            <FaPhoneAlt /> 033 4007 2444
-          </p>
-          <p>
-            <FaPhoneAlt /> 033 4000 5310
-          </p>
-          <p>
-            <FaEnvelope /> info@scis.co.in
-          </p>
+          <p><FaPhoneAlt className="contact-icon" /> 033 4007 2000</p>
+          <p><FaPhoneAlt className="contact-icon" /> 033 4007 2444</p>
+          <p><FaPhoneAlt className="contact-icon" /> 033 4000 5310</p>
+          <p><FaEnvelope className="contact-icon" /> info@scis.co.in</p>
         </div>
 
         {/* Google Map Embed */}
-        <motion.div
-          className="map-container"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="map-container">
           <iframe
             title="Google Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.611090067067!2d88.36674627536177!3d22.515986779534073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027103c6c1b2b1%3A0x2d69e21ab8e81b28!2sSouth%20City%20International%20School!5e0!3m2!1sen!2sin!4v1694952000000!5m2!1sen!2sin"
@@ -69,66 +59,103 @@ function ContactPage() {
             allowFullScreen=""
             loading="lazy"
           ></iframe>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* RIGHT SIDE */}
-      <motion.div
-        className="contact-right"
-        initial={{ opacity: 0, x: 80 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
+      <div className="contact-right">
         <h2 className="form-heading">Get In Touch</h2>
         <p className="form-sub">Drop us your details for a quick response.</p>
 
-        <form className="contact-form">
-          <motion.div
-            className="form-row"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-row">
             <div className="form-group">
               <FaUser className="icon" />
-              <input type="text" placeholder="Student's Name*" required />
+              <input 
+                type="text" 
+                name="studentName"
+                placeholder="Student's Name*" 
+                value={formData.studentName}
+                onChange={handleChange}
+                required 
+              />
             </div>
             <div className="form-group">
               <FaCalendarAlt className="icon" />
-              <input type="text" placeholder="Date of Birth*" required />
+              <input 
+                type="text" 
+                name="dob"
+                placeholder="Date of Birth* Eg. 14/01/2005" 
+                value={formData.dob}
+                onChange={handleChange}
+                required 
+              />
             </div>
-          </motion.div>
+          </div>
 
           <div className="form-row">
             <div className="form-group">
               <FaUsers className="icon" />
-              <input type="text" placeholder="Parents' Name*" required />
+              <input 
+                type="text" 
+                name="parentsName"
+                placeholder="Parents' Name*" 
+                value={formData.parentsName}
+                onChange={handleChange}
+                required 
+              />
             </div>
             <div className="form-group">
               <FaPhoneAlt className="icon" />
-              <input type="tel" placeholder="Phone Number*" required />
+              <input 
+                type="tel" 
+                name="phone"
+                placeholder="Phone Number*" 
+                value={formData.phone}
+                onChange={handleChange}
+                required 
+              />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
               <FaWhatsapp className="icon" />
-              <input type="tel" placeholder="WhatsApp Number*" required />
+              <input 
+                type="tel" 
+                name="whatsapp"
+                placeholder="WhatsApp Number*" 
+                value={formData.whatsapp}
+                onChange={handleChange}
+                required 
+              />
             </div>
             <div className="form-group">
               <FaEnvelope className="icon" />
-              <input type="email" placeholder="Email*" required />
+              <input 
+                type="email" 
+                name="email"
+                placeholder="Email*" 
+                value={formData.email}
+                onChange={handleChange}
+                required 
+              />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group full">
               <FaClock className="icon" />
-              <select>
+              <select 
+                name="tourTime"
+                value={formData.tourTime}
+                onChange={handleChange}
+                required
+              >
                 <option value="">School Tour Time Slot*</option>
-                <option>10:00 AM - 11:00 AM</option>
-                <option>12:00 PM - 1:00 PM</option>
-                <option>2:00 PM - 3:00 PM</option>
+                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
+                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
               </select>
             </div>
           </div>
@@ -136,25 +163,23 @@ function ContactPage() {
           <div className="form-row">
             <div className="form-group full">
               <FaInfoCircle className="icon" />
-              <select>
+              <select 
+                name="infoSource"
+                value={formData.infoSource}
+                onChange={handleChange}
+                required
+              >
                 <option value="">Source of Information*</option>
-                <option>Website</option>
-                <option>Friends</option>
-                <option>Social Media</option>
+                <option value="Website">Website</option>
+                <option value="Friends">Friends</option>
+                <option value="Social Media">Social Media</option>
               </select>
             </div>
           </div>
 
-          <motion.button
-            type="submit"
-            className="submit-btn"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            SUBMIT
-          </motion.button>
+          <button type="submit" className="submit-btn">SUBMIT</button>
         </form>
-      </motion.div>
+      </div>
     </section>
   );
 }

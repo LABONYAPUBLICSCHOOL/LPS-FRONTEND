@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";   // ✅ Import Link
 import "./Nav.css";
-import LPS from '../../assets/lps.png'
+import LPS from '../../assets/lps.png';
 
 function Nav() {
   const [open, setOpen] = useState(false);
@@ -15,19 +16,21 @@ function Nav() {
       <div className="nav-container">
         {/* Logo */}
         <div className="nav-logo">
-          <img src={LPS} alt="School Logo" />
+          <Link to="/">
+            <img src={LPS} alt="School Logo" />
+          </Link>
         </div>
 
-        {/* Desktop Menu */}
         <ul className={`nav-links ${open ? "active" : ""}`}>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#why">Why LPS?</a></li>
-          <li><a href="#cambridge">Cambridge Wing</a></li>
-          <li><a href="#admissions">Admissions</a></li>
-          <li><a href="#contact">Contact Us</a></li>
+          <li><Link to="/" onClick={() => setOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setOpen(false)}>About Us</Link></li>
+          <li><Link to="/why" onClick={() => setOpen(false)}>Why LPS?</Link></li>
+          <li><Link to="/cambridge" onClick={() => setOpen(false)}>Cambridge Wing</Link></li>
+          <li><Link to="/admissions" onClick={() => setOpen(false)}>Admissions</Link></li>
+          <li><Link to="/contact" onClick={() => setOpen(false)}>Contact Us</Link></li>
         </ul>
 
-        {/* Hamburger Icon */}
+        
         <div className="nav-toggle" onClick={toggleMenu}>
           {open ? <FaTimes /> : <FaBars />}
         </div>

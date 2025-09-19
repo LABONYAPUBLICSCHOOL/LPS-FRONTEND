@@ -1,17 +1,22 @@
+
+
+/* Section Styling */
 .events-section {
   width: 100%;
+
   padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
+
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 2.25rem; /* 36px */
   font-weight: 700;
   margin-bottom: 50px;
   color: #222;
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 .section-title::after {
@@ -24,15 +29,17 @@
   border-radius: 2px;
 }
 
+/* Events Grid */
 .events-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: auto;
-  padding: 0 10px;
+  padding: 0;
 }
 
+/* Event Card */
 .event-card {
   display: block;
   border-radius: 15px;
@@ -47,6 +54,7 @@
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Image Wrapper */
 .event-img-wrapper {
   position: relative;
   overflow: hidden;
@@ -57,12 +65,14 @@
   height: 230px;
   object-fit: cover;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .event-card:hover img {
   transform: scale(1.08);
 }
 
+/* Overlay */
 .event-overlay {
   position: absolute;
   bottom: 0;
@@ -83,11 +93,12 @@
 
 .event-overlay h3 {
   color: #fff;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
   font-weight: 600;
   text-align: center;
 }
 
+/* View More Button */
 .view-more-btn {
   margin-top: 50px;
 }
@@ -107,4 +118,34 @@
 .view-more-btn a:hover {
   background: #d9a900;
   transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .event-img-wrapper img {
+    height: 200px;
+  }
+  
+  .events-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .event-img-wrapper img {
+    height: 180px;
+  }
+  
+  .view-more-btn a {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
 }
