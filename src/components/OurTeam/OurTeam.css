@@ -1,0 +1,119 @@
+.our-team {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Section Title */
+.our-team h2 {
+  font-size: 2.5rem;
+  color: #1a73e8;
+  margin-bottom: 40px;
+  position: relative;
+  animation: slideDown 1.5s ease-in-out;
+}
+
+.our-team h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #1a73e8;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Teacher Card */
+.teacher-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.teacher-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Teacher Image */
+.teacher-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.teacher-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Placeholder for blank images */
+.placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0 auto 15px auto;
+}
+
+/* Teacher Name and Occupation */
+.teacher-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #1a73e8;
+}
+
+.teacher-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .teacher-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .teacher-img img,
+  .placeholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .our-team h2 {
+    font-size: 2rem;
+  }
+}

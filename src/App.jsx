@@ -9,10 +9,17 @@ import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 
 import { Routes, Route } from "react-router-dom";
+import TopNav from "./components/Top-Nav/TopNav";
+import VisionMission from "./components/VisionMission/VisionMission";
+import PrincipalMsg from "./components/PrincipalMsg/PrincipalMsg";
+import Bod from "./components/Bod/Bod";
+import OurTeam from "./components/OurTeam/OurTeam";
+import Sports from "./components/Sports/Sports";
 
 function App() {
   return (
     <>
+    <TopNav/>
       <Navbar />
 
       <Routes>
@@ -32,7 +39,12 @@ function App() {
           }
           
         /> 
-        <Route path="/about" element={<About />} />
+        <Route path="/vision-mission" element={<VisionMission />} />
+        <Route path="/principal-msg" element={<PrincipalMsg/>} />
+         <Route path="/bod" element={<Bod/>} />
+          <Route path="/ourteam" element={<OurTeam/>} />
+          <Route path="/sports" element={<Sports/>} />
+
       </Routes>
       <Footer />
     </>
