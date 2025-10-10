@@ -78,9 +78,9 @@ function Nav() {
               <li><Link to="/curriculum" onClick={() => setOpen(false)}>Curriculum</Link></li>
               <li><Link to="/co-curricular" onClick={() => setOpen(false)}>Co-Curricular</Link></li>
               <li><Link to="/sports" onClick={() => setOpen(false)}>Sports</Link></li>
-              <li><Link to="/career-guidance" onClick={() => setOpen(false)}>Career Guidance & Counselling</Link></li>
-              <li><Link to="/mental-wellbeing" onClick={() => setOpen(false)}>Mental Wellbeing Support</Link></li>
-              <li><Link to="/infrastructure" onClick={() => setOpen(false)}>Infrastructure</Link></li>
+              <li><Link to="/career" onClick={() => setOpen(false)}>Career Guidance & Counselling</Link></li>
+              <li><Link to="/mental" onClick={() => setOpen(false)}>Mental Wellbeing Support</Link></li>
+              <li><Link to="/our-campus" onClick={() => setOpen(false)}>Our Campus</Link></li>
               <li><Link to="/scouting" onClick={() => setOpen(false)}>Scouting</Link></li>
             </ul>
           </li>

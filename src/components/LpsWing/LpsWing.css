@@ -1,0 +1,138 @@
+.lpswing-container {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 30px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background: linear-gradient(135deg, #f9fbff, #eef3ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeInContainer 1s ease;
+}
+
+/* Banner */
+.lpswing-banner {
+  background: linear-gradient(135deg, #004aad, #0073e6);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: slideDown 1.2s ease;
+}
+
+.lpswing-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sections */
+.lpswing-section {
+  background: white;
+  margin: 30px 0;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+.lpswing-section:nth-child(even) {
+  background: #f3f6ff;
+}
+
+.lpswing-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.lpswing-section h2 {
+  color: #004aad;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+}
+
+.lpswing-section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: justify;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInContainer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lpswing-container {
+    margin: 60px 15px;
+    padding: 20px;
+  }
+
+  .lpswing-banner {
+    padding: 60px 15px;
+  }
+
+  .lpswing-title {
+    font-size: 2.1rem;
+  }
+
+  .lpswing-section {
+    padding: 20px;
+  }
+
+  .lpswing-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .lpswing-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .lpswing-title {
+    font-size: 1.8rem;
+  }
+
+  .lpswing-section {
+    padding: 18px;
+  }
+}

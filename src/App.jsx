@@ -15,6 +15,10 @@ import PrincipalMsg from "./components/PrincipalMsg/PrincipalMsg";
 import Bod from "./components/Bod/Bod";
 import OurTeam from "./components/OurTeam/OurTeam";
 import Sports from "./components/Sports/Sports";
+import Career from "./components/Career/Career";
+import Mental from "./components/Mental-Wellbing/Mental";
+import OurCampus from "./components/OurCampus/OurCampus";
+import LpsWing from "./components/LpsWing/LpsWing";
 
 function App() {
   return (
@@ -44,6 +48,10 @@ function App() {
          <Route path="/bod" element={<Bod/>} />
           <Route path="/ourteam" element={<OurTeam/>} />
           <Route path="/sports" element={<Sports/>} />
+           <Route path="/career" element={<Career/>} />
+           <Route path="/mental" element={<Mental/>} />
+          <Route path="/our-campus" element={<OurCampus/>} />
+          <Route path="/lps-wing" element={<LpsWing/>} />
 
       </Routes>
       <Footer />
