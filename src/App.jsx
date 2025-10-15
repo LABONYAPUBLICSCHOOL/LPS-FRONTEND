@@ -20,6 +20,7 @@ import Mental from "./components/Mental-Wellbing/Mental";
 import OurCampus from "./components/OurCampus/OurCampus";
 import LpsWing from "./components/LpsWing/LpsWing";
 import WorkWithUs from "./components/WorkWithUs/WorkWithUs";
+import Events from "./components/Events/Events";
 
 function App() {
   return (
@@ -55,6 +56,8 @@ function App() {
           <Route path="/lps-wing" element={<LpsWing/>} />
           <Route path="/contact-info" element={<ContactPage/>} />
           <Route path="/workwithus" element={<WorkWithUs/>} />
+          <Route path="/events" element={<Events/>} />
+
 
       </Routes>
       <Footer />

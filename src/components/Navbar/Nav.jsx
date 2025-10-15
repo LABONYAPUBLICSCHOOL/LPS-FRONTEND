@@ -93,7 +93,7 @@ function Nav() {
               Events {activeDropdown === "events" ? <FaChevronUp className="dropdown-icon" /> : <FaChevronDown className="dropdown-icon" />}
             </span>
             <ul className="dropdown-menu">
-              <li><Link to="/school-events" onClick={() => setOpen(false)}>School Events</Link></li>
+              <li><Link to="/events" onClick={() => setOpen(false)}>School Events</Link></li>
               <li><Link to="/testimonials" onClick={() => setOpen(false)}>Testimonials</Link></li>
             </ul>
           </li>
