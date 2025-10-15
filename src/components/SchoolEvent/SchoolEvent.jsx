@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./SchoolEvent.css";
 import { Link } from "react-router-dom";
 
@@ -33,21 +33,51 @@ const events = [
     img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
     link: "/events/investiture-ceremony",
   },
-{
+  {
     id: 6,
-    title: "Investiture Ceremony 2025",
+    title: "Sports Meet 2025",
     img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
-    link: "/events/investiture-ceremony",
+    link: "/events/sports-meet",
   },
 ];
 
 function SchoolEvents() {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cardsRef.current.forEach((card) => {
+      if (card) observer.observe(card);
+    });
+
+    return () => {
+      cardsRef.current.forEach((card) => {
+        if (card) observer.unobserve(card);
+      });
+    };
+  }, []);
+
   return (
     <section className="events-section">
       <h2 className="section-title">School Events</h2>
       <div className="events-container">
-        {events.map((event) => (
-          <Link to={event.link} key={event.id} className="event-card">
+        {events.map((event, index) => (
+          <Link
+            to={event.link}
+            key={event.id}
+            className="event-card fade-up"
+            ref={(el) => (cardsRef.current[index] = el)}
+          >
             <div className="event-img-wrapper">
               <img src={event.img} alt={event.title} />
               <div className="event-overlay">

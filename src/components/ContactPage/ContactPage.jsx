@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./ContactPage.css";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaUser, FaCalendarAlt, FaUsers, FaWhatsapp, FaClock, FaInfoCircle } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaUser,
+  FaCalendarAlt,
+  FaUsers,
+  FaWhatsapp,
+  FaClock,
+  FaInfoCircle,
+} from "react-icons/fa";
 
 function ContactPage() {
   const [formData, setFormData] = useState({
@@ -11,19 +21,42 @@ function ContactPage() {
     whatsapp: "",
     email: "",
     tourTime: "",
-    infoSource: ""
+    infoSource: "",
   });
+
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (leftRef.current) observer.observe(leftRef.current);
+    if (rightRef.current) observer.observe(rightRef.current);
+
+    return () => {
+      if (leftRef.current) observer.unobserve(leftRef.current);
+      if (rightRef.current) observer.unobserve(rightRef.current);
+    };
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Form submission logic would go here
     console.log(formData);
     alert("Thank you for your submission! We'll contact you soon.");
   };
@@ -31,24 +64,38 @@ function ContactPage() {
   return (
     <section className="contact-container">
       {/* LEFT SIDE */}
-      <div className="contact-left">
+      <div className="contact-left fade-left" ref={leftRef}>
         <h2 className="contact-heading">Connect with us</h2>
         <p className="contact-sub">We'd love to hear from you!</p>
 
         <div className="contact-info">
-          <p><FaMapMarkerAlt className="contact-icon" /> 375, Prince Anwar Shah Road, Kolkata, India, West Bengal</p>
-          <p><FaPhoneAlt className="contact-icon" /> +91 83368 15657</p>
-          <p><FaEnvelope className="contact-icon" /> admissions@scis.co.in</p>
+          <p>
+            <FaMapMarkerAlt className="contact-icon" /> 375, Prince Anwar Shah
+            Road, Kolkata, India, West Bengal
+          </p>
+          <p>
+            <FaPhoneAlt className="contact-icon" /> +91 83368 15657
+          </p>
+          <p>
+            <FaEnvelope className="contact-icon" /> admissions@scis.co.in
+          </p>
         </div>
 
         <div className="contact-info">
-          <p><FaPhoneAlt className="contact-icon" /> 033 4007 2000</p>
-          <p><FaPhoneAlt className="contact-icon" /> 033 4007 2444</p>
-          <p><FaPhoneAlt className="contact-icon" /> 033 4000 5310</p>
-          <p><FaEnvelope className="contact-icon" /> info@scis.co.in</p>
+          <p>
+            <FaPhoneAlt className="contact-icon" /> 033 4007 2000
+          </p>
+          <p>
+            <FaPhoneAlt className="contact-icon" /> 033 4007 2444
+          </p>
+          <p>
+            <FaPhoneAlt className="contact-icon" /> 033 4000 5310
+          </p>
+          <p>
+            <FaEnvelope className="contact-icon" /> info@scis.co.in
+          </p>
         </div>
 
-        {/* Google Map Embed */}
         <div className="map-container">
           <iframe
             title="Google Map"
@@ -63,7 +110,7 @@ function ContactPage() {
       </div>
 
       {/* RIGHT SIDE */}
-      <div className="contact-right">
+      <div className="contact-right fade-right" ref={rightRef}>
         <h2 className="form-heading">Get In Touch</h2>
         <p className="form-sub">Drop us your details for a quick response.</p>
 
@@ -71,24 +118,24 @@ function ContactPage() {
           <div className="form-row">
             <div className="form-group">
               <FaUser className="icon" />
-              <input 
-                type="text" 
+              <input
+                type="text"
                 name="studentName"
-                placeholder="Student's Name*" 
+                placeholder="Student's Name*"
                 value={formData.studentName}
                 onChange={handleChange}
-                required 
+                required
               />
             </div>
             <div className="form-group">
               <FaCalendarAlt className="icon" />
-              <input 
-                type="text" 
+              <input
+                type="text"
                 name="dob"
-                placeholder="Date of Birth* Eg. 14/01/2005" 
+                placeholder="Date of Birth* Eg. 14/01/2005"
                 value={formData.dob}
                 onChange={handleChange}
-                required 
+                required
               />
             </div>
           </div>
@@ -96,24 +143,24 @@ function ContactPage() {
           <div className="form-row">
             <div className="form-group">
               <FaUsers className="icon" />
-              <input 
-                type="text" 
+              <input
+                type="text"
                 name="parentsName"
-                placeholder="Parents' Name*" 
+                placeholder="Parents' Name*"
                 value={formData.parentsName}
                 onChange={handleChange}
-                required 
+                required
               />
             </div>
             <div className="form-group">
               <FaPhoneAlt className="icon" />
-              <input 
-                type="tel" 
+              <input
+                type="tel"
                 name="phone"
-                placeholder="Phone Number*" 
+                placeholder="Phone Number*"
                 value={formData.phone}
                 onChange={handleChange}
-                required 
+                required
               />
             </div>
           </div>
@@ -121,24 +168,24 @@ function ContactPage() {
           <div className="form-row">
             <div className="form-group">
               <FaWhatsapp className="icon" />
-              <input 
-                type="tel" 
+              <input
+                type="tel"
                 name="whatsapp"
-                placeholder="WhatsApp Number*" 
+                placeholder="WhatsApp Number*"
                 value={formData.whatsapp}
                 onChange={handleChange}
-                required 
+                required
               />
             </div>
             <div className="form-group">
               <FaEnvelope className="icon" />
-              <input 
-                type="email" 
+              <input
+                type="email"
                 name="email"
-                placeholder="Email*" 
+                placeholder="Email*"
                 value={formData.email}
                 onChange={handleChange}
-                required 
+                required
               />
             </div>
           </div>
@@ -146,7 +193,7 @@ function ContactPage() {
           <div className="form-row">
             <div className="form-group full">
               <FaClock className="icon" />
-              <select 
+              <select
                 name="tourTime"
                 value={formData.tourTime}
                 onChange={handleChange}
@@ -163,7 +210,7 @@ function ContactPage() {
           <div className="form-row">
             <div className="form-group full">
               <FaInfoCircle className="icon" />
-              <select 
+              <select
                 name="infoSource"
                 value={formData.infoSource}
                 onChange={handleChange}
@@ -177,7 +224,9 @@ function ContactPage() {
             </div>
           </div>
 
-          <button type="submit" className="submit-btn">SUBMIT</button>
+          <button type="submit" className="submit-btn">
+            SUBMIT
+          </button>
         </form>
       </div>
     </section>

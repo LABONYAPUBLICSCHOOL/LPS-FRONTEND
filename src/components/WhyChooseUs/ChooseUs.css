@@ -1,9 +1,11 @@
 .why {
   width: 100%;
-  padding: 60px 20px;
-  background: #fff;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f9fcff);
+  overflow: hidden;
 }
 
+/* Container Animation */
 .why-container {
   display: flex;
   align-items: center;
@@ -12,23 +14,46 @@
   max-width: 1200px;
   margin: auto;
   flex-wrap: wrap;
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.3s ease-out;
 }
 
-/* Left Text */
+.why-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left Section Animation */
 .why-left {
   flex: 1;
   min-width: 300px;
+  transform: translateX(-70px);
+  opacity: 0;
+  transition: all 1.2s ease 0.3s;
+}
+
+.why-container.visible .why-left {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .why-left h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #222;
+  margin-bottom: 25px;
+  color: #1e3c72;
+  letter-spacing: 0.5px;
 }
 
-.why-left .highlight {
-  color: #0066cc;
+.highlight {
+  color: #ff6600;
+  transition: color 0.3s ease;
+}
+
+.why-left h2:hover .highlight {
+  color: #ff7b00;
 }
 
 .why-left ul {
@@ -37,32 +62,53 @@
 }
 
 .why-left li {
-  font-size: 16px;
-  margin-bottom: 12px;
+  font-size: 17px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.why-left .icon {
-  color: #0066cc;
+.why-left li:hover {
+  color: #ff6600;
+  transform: translateX(8px);
+}
+
+.icon {
+  color: #ff6600;
   margin-right: 10px;
   font-size: 16px;
 }
 
-/* Right Image */
+/* Right Image Animation */
 .why-right {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  transform: translateX(70px);
+  opacity: 0;
+  transition: all 1.2s ease 0.6s;
+}
+
+.why-container.visible .why-right {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .why-right img {
-  width: 350px;
-  height: 350px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.why-right img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive */
@@ -72,18 +118,17 @@
     text-align: center;
   }
 
-  .why-right img {
-    width: 250px;
-    height: 250px;
-    margin-top: 20px;
+  .why-left h2 {
+    font-size: 28px;
   }
 
-  .why-left h2 {
-    font-size: 26px;
+  .why-right img {
+    width: 260px;
+    height: 260px;
+    margin-top: 25px;
   }
 
   .why-left li {
     justify-content: center;
-    text-align: left;
   }
 }

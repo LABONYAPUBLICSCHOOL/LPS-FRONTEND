@@ -1,17 +1,38 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Welcome.css";
 
 function Welcome() {
-  return (
-    <section className="welcome">
-      <div className="welcome-container">
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
 
-        {/* Left Side Image */}
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // triggers only once
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
+
+  return (
+    <section className="welcome" ref={sectionRef}>
+      <div className={`welcome-container ${isVisible ? "visible" : ""}`}>
         <div className="welcome-left">
           <img src="./kids.jpg" alt="School" className="main-img" />
         </div>
 
-        {/* Right Side Text */}
         <div className="welcome-right">
           <h2>
             Welcome To <span className="heading">Labonya Public School</span>
@@ -23,7 +44,6 @@ function Welcome() {
             students and teachers, creating a vibrant and dynamic learning environment.
           </p>
         </div>
-
       </div>
     </section>
   );

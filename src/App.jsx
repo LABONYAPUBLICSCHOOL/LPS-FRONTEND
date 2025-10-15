@@ -19,6 +19,7 @@ import Career from "./components/Career/Career";
 import Mental from "./components/Mental-Wellbing/Mental";
 import OurCampus from "./components/OurCampus/OurCampus";
 import LpsWing from "./components/LpsWing/LpsWing";
+import WorkWithUs from "./components/WorkWithUs/WorkWithUs";
 
 function App() {
   return (
@@ -52,6 +53,8 @@ function App() {
            <Route path="/mental" element={<Mental/>} />
           <Route path="/our-campus" element={<OurCampus/>} />
           <Route path="/lps-wing" element={<LpsWing/>} />
+          <Route path="/contact-info" element={<ContactPage/>} />
+          <Route path="/workwithus" element={<WorkWithUs/>} />
 
       </Routes>
       <Footer />

@@ -158,6 +158,19 @@
   transform: translateY(0);
 }
 
+/* Scroll animation styles */
+.fade-left, .fade-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-left.visible, .fade-right.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
   .contact-container {

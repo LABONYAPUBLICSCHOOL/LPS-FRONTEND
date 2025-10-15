@@ -105,8 +105,8 @@ function Nav() {
             </span>
             <ul className="dropdown-menu">
               <li><Link to="/contact-info" onClick={() => setOpen(false)}>Contact Information</Link></li>
-              <li><Link to="/how-to-reach" onClick={() => setOpen(false)}>How to Reach</Link></li>
-              <li><Link to="/work-with-us" onClick={() => setOpen(false)}>Work with Us</Link></li>
+              <li><Link to="https://maps.app.goo.gl/X8QsbfwgQN5ha5xJ9" onClick={() => setOpen(false)}>How to Reach</Link></li>
+              <li><Link to="/workwithus" onClick={() => setOpen(false)}>Work with Us</Link></li>
             </ul>
           </li>
         </ul>

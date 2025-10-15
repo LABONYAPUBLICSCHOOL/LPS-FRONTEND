@@ -1,17 +1,13 @@
-
-
 /* Section Styling */
 .events-section {
   width: 100%;
-
   padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
-
 }
 
 .section-title {
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 50px;
   color: #222;
@@ -93,7 +89,7 @@
 
 .event-overlay h3 {
   color: #fff;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
   font-weight: 600;
   text-align: center;
 }
@@ -120,16 +116,28 @@
   transform: scale(1.05);
 }
 
+/* Fade Up Scroll Animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
   }
-  
+
   .event-img-wrapper img {
     height: 200px;
   }
-  
+
   .events-container {
     gap: 20px;
   }
@@ -143,7 +151,7 @@
   .event-img-wrapper img {
     height: 180px;
   }
-  
+
   .view-more-btn a {
     padding: 12px 24px;
     font-size: 14px;

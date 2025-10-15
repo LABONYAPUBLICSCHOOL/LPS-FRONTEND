@@ -1,7 +1,8 @@
 .welcome {
   width: 100%;
-  padding: 60px 20px;
-  background: #fff;
+  padding: 80px 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f8faff);
+  overflow: hidden;
 }
 
 .welcome-container {
@@ -12,43 +13,105 @@
   margin: auto;
   gap: 40px;
   flex-wrap: wrap;
+
+  /* Initial hidden state */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.3s ease-out;
+}
+
+/* When visible (scroll trigger) */
+.welcome-container.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Left Image */
 .welcome-left {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  justify-content: center;
+  transform: translateX(-80px);
+  opacity: 0;
+  transition: all 1.3s ease 0.3s;
 }
+
+.welcome-container.visible .welcome-left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .main-img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 12px;
+  max-width: 520px;
+  border-radius: 20px;
   object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.main-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
 }
 
 /* Right Text */
 .welcome-right {
   flex: 1.2;
   min-width: 300px;
+  transform: translateX(80px);
+  opacity: 0;
+  transition: all 1.3s ease 0.6s;
 }
+
+.welcome-container.visible .welcome-right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .welcome-right h2 {
-  font-size: 28px;
+  font-size: 36px;
   margin-bottom: 20px;
-  color: #0066cc; /* heading color */
+  color: #1e3c72;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
+
+.welcome-right h2 .heading {
+  color: #ff6600;
+  transition: color 0.4s ease;
+}
+
+.welcome-right:hover h2 .heading {
+  color: #ff7b00;
+}
+
 .welcome-right p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.8;
   color: #333;
+  text-align: justify;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .welcome-container {
     flex-direction: column;
     text-align: center;
+    padding: 20px;
   }
+
+  .welcome-right h2 {
+    font-size: 28px;
+  }
+
+  .welcome-right p {
+    font-size: 15.5px;
+    text-align: center;
+  }
+
   .main-img {
-    margin-bottom: 20px;
+    max-width: 90%;
   }
 }

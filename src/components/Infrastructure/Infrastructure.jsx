@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Infrastructure.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-/* OPTION A (recommended): place images in `public/` and reference with leading slash:
-   public/ourcampus1.jpg, public/ourcampus2.jpg, ... */
 const images = [
   { id: 1, src: "/ourcampus1.jpg", alt: "Library" },
   { id: 2, src: "/ourcampus2.jpg", alt: "Playground" },
@@ -15,14 +13,25 @@ const images = [
   { id: 5, src: "/ourcampus4.jpg", alt: "Computer Lab" },
 ];
 
-/* OPTION B (alternate): if you keep images under src/assets, uncomment imports below and replace images[] with imported variables
-import campus1 from '../../assets/ourcampus1.jpg';
-...
-const images = [{ id:1, src: campus1, alt: '...' }, ...];
-*/
-
 export default function Infrastructure() {
-  const sliderRef = React.useRef(null);
+  const sliderRef = useRef(null);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, []);
 
   const settings = {
     dots: false,
@@ -31,7 +40,7 @@ export default function Infrastructure() {
     slidesToShow: 3,
     centerMode: true,
     centerPadding: "0px",
-    arrows: false, // using custom external arrows below
+    arrows: false,
     lazyLoad: "ondemand",
     swipeToSlide: true,
     responsive: [
@@ -41,7 +50,7 @@ export default function Infrastructure() {
   };
 
   return (
-    <section className="infra-section">
+    <section ref={sectionRef} className="infra-section fade-up">
       <h2 className="infra-title">Infrastructure</h2>
 
       <div className="infra-slider-wrap">
