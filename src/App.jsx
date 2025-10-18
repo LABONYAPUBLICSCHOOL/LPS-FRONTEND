@@ -21,11 +21,15 @@ import OurCampus from "./components/OurCampus/OurCampus";
 import LpsWing from "./components/LpsWing/LpsWing";
 import WorkWithUs from "./components/WorkWithUs/WorkWithUs";
 import Events from "./components/Events/Events";
+import Testimonial from "./components/Testimonial/Testimonial";
+import Curriculum from "./components/Curriculum/Curriculum";
+import ScrollToTop from "./components/ScrollTop/ScrollTop";
 
 function App() {
   return (
     <>
-    <TopNav/>
+    <ScrollToTop/>
+      <TopNav />
       <Navbar />
 
       <Routes>
@@ -38,25 +42,31 @@ function App() {
               <WhyChooseUs />
               <SchoolEvents />
               <Infrastructure />
+              <Testimonial />
               <ContactPage />
-             
+
             </>
-            
+
           }
-          
-        /> 
+
+        />
         <Route path="/vision-mission" element={<VisionMission />} />
-        <Route path="/principal-msg" element={<PrincipalMsg/>} />
-         <Route path="/bod" element={<Bod/>} />
-          <Route path="/ourteam" element={<OurTeam/>} />
-          <Route path="/sports" element={<Sports/>} />
-           <Route path="/career" element={<Career/>} />
-           <Route path="/mental" element={<Mental/>} />
-          <Route path="/our-campus" element={<OurCampus/>} />
-          <Route path="/lps-wing" element={<LpsWing/>} />
-          <Route path="/contact-info" element={<ContactPage/>} />
-          <Route path="/workwithus" element={<WorkWithUs/>} />
-          <Route path="/events" element={<Events/>} />
+        <Route path="/principal-msg" element={<PrincipalMsg />} />
+        <Route path="/bod" element={<Bod />} />
+        <Route path="/ourteam" element={<OurTeam />} />
+        <Route path="/sports" element={<Sports />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/mental" element={<Mental />} />
+        <Route path="/our-campus" element={<OurCampus />} />
+        <Route path="/lps-wing" element={<LpsWing />} />
+        <Route path="/contact-info" element={<ContactPage />} />
+        <Route path="/workwithus" element={<WorkWithUs />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/curriculum" element={<Curriculum />} />
+
+
+
 
 
       </Routes>

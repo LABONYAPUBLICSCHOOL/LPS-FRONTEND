@@ -1,0 +1,66 @@
+.curriculum-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f0f9ff, #cbebff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.curriculum-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.curriculum-content {
+  max-width: 900px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.curriculum-content h2 {
+  font-size: 2rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.curriculum-content p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .curriculum-title {
+    font-size: 2.3rem;
+  }
+
+  .curriculum-content {
+    padding: 25px;
+  }
+
+  .curriculum-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .curriculum-content p {
+    font-size: 1rem;
+  }
+}
