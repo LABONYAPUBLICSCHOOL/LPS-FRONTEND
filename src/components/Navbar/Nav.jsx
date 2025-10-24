@@ -68,7 +68,6 @@ function Nav() {
             </span>
             <ul className="dropdown-menu">
               <li><Link to="/curriculum">Curriculum</Link></li>
-              <li><Link to="/co-curricular">Co-Curricular</Link></li>
               <li><Link to="/sports">Sports</Link></li>
               <li><Link to="/career">Career Guidance</Link></li>
               <li><Link to="/mental">Mental Wellbeing</Link></li>
