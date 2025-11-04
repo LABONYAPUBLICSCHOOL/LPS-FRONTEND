@@ -70,18 +70,19 @@ function ContactPage() {
 
         <div className="contact-info">
           <p>
-            <FaMapMarkerAlt className="contact-icon" /> 375, Prince Anwar Shah
-            Road, Kolkata, India, West Bengal
+            <FaMapMarkerAlt className="contact-icon" /> 1, Shri Aurobindo Rd,
+            Babudanga, Bandhaghat, Salkia, Howrah, Kolkata, West Bengal 711106
           </p>
           <p>
-            <FaPhoneAlt className="contact-icon" /> +91 83368 15657
+            <FaPhoneAlt className="contact-icon" /> +91 7439893586
           </p>
           <p>
-            <FaEnvelope className="contact-icon" /> admissions@scis.co.in
+            <FaEnvelope className="contact-icon" />{" "}
+            labonyapublicschool98@gmail.com
           </p>
         </div>
 
-        <div className="contact-info">
+        {/* <div className="contact-info">
           <p>
             <FaPhoneAlt className="contact-icon" /> 033 4007 2000
           </p>
@@ -94,7 +95,7 @@ function ContactPage() {
           <p>
             <FaEnvelope className="contact-icon" /> info@scis.co.in
           </p>
-        </div>
+        </div> */}
 
         <div className="map-container">
           <iframe
@@ -200,9 +201,9 @@ function ContactPage() {
                 required
               >
                 <option value="">School Tour Time Slot*</option>
-                <option value="10:00 AM - 11:00 AM">10:00 AM - 11:00 AM</option>
+                <option value="10:00 AM - 11:00 AM">11:00 AM - 12:00 PM</option>
                 <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
-                <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option>
+                {/* <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option> */}
               </select>
             </div>
           </div>

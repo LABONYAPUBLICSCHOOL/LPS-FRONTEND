@@ -8,12 +8,12 @@ function WorkWithUs() {
     subject: "",
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
@@ -26,25 +26,30 @@ function WorkWithUs() {
       subject: "",
       name: "",
       email: "",
-      message: ""
+      message: "",
     });
   };
 
   return (
     <div className="work-page">
       <h2>Work With Us</h2>
-      <p className="subtitle">Learn as you grow, and grow as you learn.</p>
+      <p className="subtitle">As you learn, you grow. As you grow, you learn</p>
       <p className="description">
-        If you are energetic and ready to learn new skills, quick to adapt to changes, 
-        take on challenges that are beyond the call of regular duties, South City International School 
-        is the place for you. It is not a job but an exciting and rewarding career that awaits you. 
-        We welcome teachers who consider teaching as a Vocation instead of a Profession.
+        Are you energetic, adaptable and ready to learn? At Labonya Public
+        School, we don’t offer just a job — we offer a meaningful and rewarding
+        career. We are looking for teachers who see teaching as a calling, not
+        just a profession
       </p>
       <form className="work-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-group">
             <label>Post Applying For*</label>
-            <select name="post" value={formData.post} onChange={handleChange} required>
+            <select
+              name="post"
+              value={formData.post}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select</option>
               <option value="teacher">Teacher</option>
               <option value="admin">Admin</option>
@@ -52,10 +57,15 @@ function WorkWithUs() {
           </div>
           <div className="form-group">
             <label>Grade*</label>
-            <select name="grade" value={formData.grade} onChange={handleChange} required>
+            <select
+              name="grade"
+              value={formData.grade}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select</option>
-              <option value="grade1">Grade 1</option>
-              <option value="grade2">Grade 2</option>
+              <option value="grade1">MALE</option>
+              <option value="grade2">FEMALE</option>
             </select>
           </div>
         </div>
@@ -63,20 +73,30 @@ function WorkWithUs() {
         <div className="form-row">
           <div className="form-group">
             <label>Subject*</label>
-            <select name="subject" value={formData.subject} onChange={handleChange} required>
+            <select
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            >
               <option value="">Select</option>
               <option value="math">Math</option>
               <option value="english">English</option>
+              <option value="Science">Science</option>
+              <option value="History">History</option>
+              <option value="Geography">Geography</option>
+              <option value="Commerce">Commerce</option>
+              <option value="Hindi">Hindi</option>
             </select>
           </div>
           <div className="form-group">
             <label>Name*</label>
-            <input 
-              type="text" 
-              name="name" 
-              value={formData.name} 
-              onChange={handleChange} 
-              required 
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
             />
           </div>
         </div>
@@ -84,12 +104,12 @@ function WorkWithUs() {
         <div className="form-row">
           <div className="form-group full-width">
             <label>Email*</label>
-            <input 
-              type="email" 
-              name="email" 
-              value={formData.email} 
-              onChange={handleChange} 
-              required 
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
             />
           </div>
         </div>
@@ -97,15 +117,17 @@ function WorkWithUs() {
         <div className="form-row">
           <div className="form-group full-width">
             <label>Write To Us</label>
-            <textarea 
-              name="message" 
-              value={formData.message} 
-              onChange={handleChange} 
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
             />
           </div>
         </div>
 
-        <button type="submit" className="submit-btn">SUBMIT</button>
+        <button type="submit" className="submit-btn">
+          SUBMIT
+        </button>
       </form>
     </div>
   );
