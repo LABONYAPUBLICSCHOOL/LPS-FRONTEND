@@ -23,18 +23,14 @@ function ChooseUs() {
   }, []);
 
   const features = [
-    "CCTV Secured 3.59-acre campus with 70% open space",
-    "1:17 Teacher Student Ratio with an Experiential Pedagogical Approach",
-    "Experienced, dedicated, and self-motivated teachers",
-    "Globally relevant curriculum with Indian roots in value and culture",
-    "Technology driven learning",
-    "Future-ready education with AI, STEM and Robotics",
-    "Emphasis on creative thinking, problem-solving and critical thinking",
-    "Foreign Language programs and cultural exchange initiatives",
-    "Robust sports program with diverse opportunities",
-    "Personalized career guidance and internship support",
-    "Active parent-teacher communication & partnership programs",
-    "Dedicated support for students with special needs"
+    "English–medium co-ed school located in Salkia, Howrah",
+    "Kindergarten & Primary levels offered in a secure environment",
+    "Dedicated and motivated faculty committed to student growth",
+    "Curriculum designed to build global thinking with strong value foundation",
+    "Emphasis on technology-aware learning for today’s learners",
+    "Focus on creativity, problem-solving & critical thinking",
+    "Active parent-teacher communication & collaboration",
+    "Inclusive support for learners with diverse academic needs",
   ];
 
   return (
@@ -54,7 +50,7 @@ function ChooseUs() {
         </div>
 
         <div className="why-right">
-          <img src="school.png" alt="School" />
+          <img src="school.jpg" alt="School" />
         </div>
       </div>
     </section>
