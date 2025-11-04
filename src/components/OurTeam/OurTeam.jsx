@@ -1,11 +1,22 @@
 import React from "react";
 import "./OurTeam.css";
+import Contact from "../ContactPage/ContactPage";
 
 // Sample data for teachers (images left blank for now)
 const teachers = [
-  { id: 1, name: "Mrs. Anjali Sharma", occupation: "Mathematics Teacher", photo: "" },
+  {
+    id: 1,
+    name: "Mrs. Anjali Sharma",
+    occupation: "Mathematics Teacher",
+    photo: "",
+  },
   { id: 2, name: "Mr. Rohan Gupta", occupation: "Physics Teacher", photo: "" },
-  { id: 3, name: "Ms. Priya Singh", occupation: "Chemistry Teacher", photo: "" },
+  {
+    id: 3,
+    name: "Ms. Priya Singh",
+    occupation: "Chemistry Teacher",
+    photo: "",
+  },
   { id: 4, name: "Mr. Arjun Mehta", occupation: "English Teacher", photo: "" },
   { id: 5, name: "Ms. Kavita Roy", occupation: "Biology Teacher", photo: "" },
   { id: 6, name: "Mr. Vivek Jain", occupation: "History Teacher", photo: "" },
@@ -31,6 +42,7 @@ function OurTeam() {
           </div>
         ))}
       </div>
+      <Contact />
     </div>
   );
 }

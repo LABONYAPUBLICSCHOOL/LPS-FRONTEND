@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Sports.css";
+import Contact from "../ContactPage/ContactPage";
 
 function Sports() {
   const [selectedSport, setSelectedSport] = useState("Cricket");
@@ -24,12 +25,15 @@ function Sports() {
 
       {/* Content Section */}
       <section className="sports-content">
-        <h2>Sports at Labonaya Public School: Unleashing Athletic Excellence</h2>
+        <h2>
+          Sports at Labonaya Public School: Unleashing Athletic Excellence
+        </h2>
         <p>
-          At Labonaya Public School, we believe that sports play a vital role in shaping the minds
-          and bodies of our students. Our comprehensive sports program is designed to foster a
-          culture of athletic excellence, promoting physical fitness, talent nurturing, and
-          essential life skills like teamwork, discipline, and resilience.
+          At Labonaya Public School, we believe that sports play a vital role in
+          shaping the minds and bodies of our students. Our comprehensive sports
+          program is designed to foster a culture of athletic excellence,
+          promoting physical fitness, talent nurturing, and essential life
+          skills like teamwork, discipline, and resilience.
         </p>
 
         <h3>A Wide Range of Sports and Activities</h3>
@@ -52,17 +56,18 @@ function Sports() {
 
         <h3>Expert Coaching and Mentorship</h3>
         <p>
-          Our experienced and dedicated sports faculty provide regular training sessions, rigorous
-          practice, and guidance to help our students excel in their preferred sporting disciplines.
-          We encourage participation in inter-school and regional competitions, fostering a spirit
-          of healthy competition and teamwork.
+          Our experienced and dedicated sports faculty provide regular training
+          sessions, rigorous practice, and guidance to help our students excel
+          in their preferred sporting disciplines. We encourage participation in
+          inter-school and regional competitions, fostering a spirit of healthy
+          competition and teamwork.
         </p>
 
         <h3>Beyond Winning: Building Life Skills</h3>
         <p>
-          At Labonaya Public School, we believe that sports are not just about winning medals, but
-          about developing essential life skills like leadership, teamwork, perseverance, and time
-          management.
+          At Labonaya Public School, we believe that sports are not just about
+          winning medals, but about developing essential life skills like
+          leadership, teamwork, perseverance, and time management.
         </p>
       </section>
 
@@ -94,6 +99,7 @@ function Sports() {
           ))}
         </div>
       </div>
+      <Contact />
     </div>
   );
 }

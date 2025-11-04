@@ -3,6 +3,7 @@ import "./VisionMission.css";
 // import banner from "../assets/banner.jpg";
 // import visionImg from "../assets/vision.jpg";
 // import missionImg from "../assets/mission.jpg";
+import Contact from "../ContactPage/ContactPage";
 
 function VisionMission() {
   return (
@@ -16,13 +17,13 @@ function VisionMission() {
       <section className="about">
         <h2>About Us</h2>
         <p>
-          Labonaya Public School, located in the heart of Kolkata, is a
-          premier institution known for its commitment to holistic education and
+          Labonaya Public School, located in the heart of Kolkata, is a premier
+          institution known for its commitment to holistic education and
           academic excellence. It is housed in a 5 storied building comprising a
-          built-up area of 127000 sq.ft.(approx.) and a campus area of 3.6 acres.
-          Established with the vision of nurturing global citizens, the school
-          follows an international curriculum - IGCSE (Cambridge) and is also
-          affiliated to the CISCE.
+          built-up area of 127000 sq.ft.(approx.) and a campus area of 3.6
+          acres. Established with the vision of nurturing global citizens, the
+          school follows an international curriculum - IGCSE (Cambridge) and is
+          also affiliated to the CISCE.
         </p>
         <p>
           The campus is equipped with state-of-the-art infrastructure designed
@@ -33,11 +34,11 @@ function VisionMission() {
         </p>
         <p>
           Sports and co-curricular activities are given significant importance,
-          with multi-sports facilities and well-maintained playground. The school
-          also houses a music room, dance room, art studio, and robotics lab,
-          ensuring an all-rounded development environment. With its world-class
-          amenities and dedicated faculty, Labonaya Public School stands
-          as a beacon of quality education in the region.
+          with multi-sports facilities and well-maintained playground. The
+          school also houses a music room, dance room, art studio, and robotics
+          lab, ensuring an all-rounded development environment. With its
+          world-class amenities and dedicated faculty, Labonaya Public School
+          stands as a beacon of quality education in the region.
         </p>
         <p>
           It has been 16 years since the inception of the school and the school
@@ -58,10 +59,11 @@ function VisionMission() {
             <h2>Vision</h2>
             <p>
               Labonaya Public School is committed to delivering a transformative
-              education that equips students for a dynamic world. Our collaborative
-              environment ignites a passion for growth, enabling students to become
-              proactive leaders. With excellence as our guide, we aim to redefine
-              knowledge ecosystems and shape a better future for all.
+              education that equips students for a dynamic world. Our
+              collaborative environment ignites a passion for growth, enabling
+              students to become proactive leaders. With excellence as our
+              guide, we aim to redefine knowledge ecosystems and shape a better
+              future for all.
             </p>
           </div>
           <div className="vision-img">
@@ -81,13 +83,14 @@ function VisionMission() {
             <p>
               Our Mission is to inspire students to discover their potential
               through lifelong learning in a dynamic and supportive environment.
-              We foster creativity, critical thinking, and curiosity, providing an
-              exceptional education that cultivates success, confidence, and
+              We foster creativity, critical thinking, and curiosity, providing
+              an exceptional education that cultivates success, confidence, and
               compassion, making a positive impact in communities and beyond.
             </p>
           </div>
         </div>
       </section>
+      <Contact />
     </div>
   );
 }

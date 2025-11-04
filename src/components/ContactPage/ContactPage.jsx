@@ -99,7 +99,7 @@ function ContactPage() {
         <div className="map-container">
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.611090067067!2d88.36674627536177!3d22.515986779534073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027103c6c1b2b1%3A0x2d69e21ab8e81b28!2sSouth%20City%20International%20School!5e0!3m2!1sen!2sin!4v1694952000000!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d300.6456464112847!2d88.34822771102748!3d22.60162959348457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277ef64bf8251%3A0xa1f7ec1ee032ed6f!2sLabonya%20Public%20School!5e0!3m2!1sen!2sin!4v1762244750782!5m2!1sen!2sin"
             width="100%"
             height="250"
             style={{ border: 0 }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Curriculum.css";
+import Contact from "../ContactPage/ContactPage";
 
 export default function Curriculum() {
   return (
@@ -13,7 +14,6 @@ export default function Curriculum() {
       >
         Curriculum
       </motion.h1>
-
       <motion.div
         className="curriculum-content"
         initial={{ opacity: 0 }}
@@ -38,6 +38,7 @@ export default function Curriculum() {
           milestone!
         </p>
       </motion.div>
+      <Contact />
     </div>
   );
 }

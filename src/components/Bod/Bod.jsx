@@ -4,6 +4,7 @@ import "./Bod.css";
 // import director1 from "../assets/director1.jpg"; // Replace with actual images
 // import director2 from "../assets/director2.jpg";
 // import director3 from "../assets/director3.jpg";
+import Contact from "../ContactPage/ContactPage";
 
 function Bod() {
   return (
@@ -21,7 +22,11 @@ function Bod() {
         <div className="director-card">
           <img src="" alt="Mr. Ravi Todi" />
           <h3>Mr. Ravi Todi</h3>
-          <p>Director<br/>Shrachi Group of Companies</p>
+          <p>
+            Director
+            <br />
+            Shrachi Group of Companies
+          </p>
         </div>
         <div className="director-card">
           <img src="" alt="Mr. J K Khetawat" />
@@ -31,7 +36,11 @@ function Bod() {
         <div className="director-card">
           <img src="" alt="Mr. Pradeep Sureka" />
           <h3>Mr. Pradeep Sureka</h3>
-          <p>Managing Director<br/>Sureka Group of Companies</p>
+          <p>
+            Managing Director
+            <br />
+            Sureka Group of Companies
+          </p>
         </div>
       </section>
 
@@ -39,12 +48,12 @@ function Bod() {
       <section className="vision-text">
         <h2>The Birth of a Vision</h2>
         <p>
-          Years ago, we embarked on a mission to establish a unique school in the
-          vibrant city of Kolkata. Inspired by the city's esteemed intellectual
-          community and driven by our sense of corporate responsibility, we
-          envisioned a school that would offer exceptional education through
-          internationally acclaimed curricula, supported by cutting-edge
-          technology and an exceptional faculty.
+          Years ago, we embarked on a mission to establish a unique school in
+          the vibrant city of Kolkata. Inspired by the city's esteemed
+          intellectual community and driven by our sense of corporate
+          responsibility, we envisioned a school that would offer exceptional
+          education through internationally acclaimed curricula, supported by
+          cutting-edge technology and an exceptional faculty.
         </p>
         <p>
           To transform our vision into reality, we allocated a significant
@@ -62,6 +71,7 @@ function Bod() {
           and stands as a shining beacon in the realm of education in Kolkata.
         </p>
       </section>
+      <Contact />
     </div>
   );
 }
