@@ -88,7 +88,7 @@ function SchoolEvents() {
         ))}
       </div>
       <div className="view-more-btn">
-        <Link to="/events">VIEW MORE</Link>
+        <Link to="/events">VIEW MORE..</Link>
       </div>
     </section>
   );
