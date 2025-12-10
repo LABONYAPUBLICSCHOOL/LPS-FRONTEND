@@ -21,7 +21,8 @@ const teachers = [
   { id: 5, name: "Mr. Shivam Sundar Lal", occupation: "Class X-XII(HOD)", photo: "/5.jpeg" },
   { id: 6, name: "Ms. Sweety Barma", occupation: "Examination Incharge(Junior Section)", photo: "/6.jpeg" },
   { id: 7, name: "Ms. Sarmistha Chowdhury", occupation: "Student Counsellor", photo: "/7.jpeg" },
-  { id: 7, name: "Ms. Puja Agarwal", occupation: "Class I-IV(HOD)", photo: "/8.jpeg" },
+  { id: 8, name: "Ms. Puja Agarwal", occupation: "Class I-IV(HOD)", photo: "/8.jpeg" },
+   { id: 9, name: "Ms. Payal", occupation: "Class I-IV(HOD)", photo: "/8.jpeg" },
   // Add more teachers as needed
 ];
 
