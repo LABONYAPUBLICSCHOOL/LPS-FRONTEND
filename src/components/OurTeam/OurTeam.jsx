@@ -6,20 +6,22 @@ import Contact from "../ContactPage/ContactPage";
 const teachers = [
   {
     id: 1,
-    name: "Mrs. Anjali Sharma",
-    occupation: "Mathematics Teacher",
-    photo: "",
+    name: "Mr. Paresh Nath Thakur",
+    occupation: "Discipliner Incharge",
+    photo: "/1.jpeg",
   },
-  { id: 2, name: "Mr. Rohan Gupta", occupation: "Physics Teacher", photo: "" },
+  { id: 2, name: "Ms. Riya Deb", occupation: "Head of Cultural Programs & Events", photo: "/2.jpeg" },
   {
     id: 3,
-    name: "Ms. Priya Singh",
-    occupation: "Chemistry Teacher",
-    photo: "",
+    name: "Ms. Dipa Bose",
+    occupation: "PLAY HOUSE - UKG (HOD)",
+    photo: "/3.jpeg",
   },
-  { id: 4, name: "Mr. Arjun Mehta", occupation: "English Teacher", photo: "" },
-  { id: 5, name: "Ms. Kavita Roy", occupation: "Biology Teacher", photo: "" },
-  { id: 6, name: "Mr. Vivek Jain", occupation: "History Teacher", photo: "" },
+  { id: 4, name: "Mr. Ravi Shukla", occupation: "Class V-IX(HOD)", photo: "/4.jpeg" },
+  { id: 5, name: "Mr. Shivam Sundar Lal", occupation: "Class X-XII(HOD)", photo: "/5.jpeg" },
+  { id: 6, name: "Ms. Sweety Barma", occupation: "Examination Incharge(Junior Section)", photo: "/6.jpeg" },
+  { id: 7, name: "Ms. Sarmistha Chowdhury", occupation: "Student Counsellor", photo: "/7.jpeg" },
+  { id: 7, name: "Ms. Puja Agarwal", occupation: "Class I-IV(HOD)", photo: "/8.jpeg" },
   // Add more teachers as needed
 ];
 
