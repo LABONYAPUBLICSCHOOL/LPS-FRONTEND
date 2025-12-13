@@ -1,6 +1,6 @@
 import React from "react";
 import "./Bod.css";
-// import banner from "../assets/bod-banner.jpg"; // Banner image
+import bod from "../../assets/bod.jpeg"; // Banner image
 // import director1 from "../assets/director1.jpg"; // Replace with actual images
 // import director2 from "../assets/director2.jpg";
 // import director3 from "../assets/director3.jpg";
@@ -11,7 +11,7 @@ function Bod() {
     <div className="bod-page">
       {/* Banner */}
       <div className="banner">
-        <img src="" alt="Board of Directors Banner" />
+        <img src={bod} alt="Board of Directors Banner" />
         <div className="banner-text">
           <h1>Board of Directors</h1>
         </div>
@@ -20,7 +20,7 @@ function Bod() {
       {/* Directors Section */}
       <section className="directors">
         <div className="director-card">
-          <img src="" alt="Mr. Ravi Todi" />
+          <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Mr. Ravi Todi" />
           <h3>Mr. Ravi Todi</h3>
           <p>
             Director
@@ -29,12 +29,12 @@ function Bod() {
           </p>
         </div>
         <div className="director-card">
-          <img src="" alt="Mr. J K Khetawat" />
+          <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Mr. J K Khetawat" />
           <h3>Mr. J K Khetawat</h3>
           <p>Rameswara Group of Companies</p>
         </div>
         <div className="director-card">
-          <img src="" alt="Mr. Pradeep Sureka" />
+          <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Mr. Pradeep Sureka" />
           <h3>Mr. Pradeep Sureka</h3>
           <p>
             Managing Director

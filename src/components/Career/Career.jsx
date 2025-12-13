@@ -1,6 +1,6 @@
 import React from "react";
 import "./Career.css";
-// import banner from "../assets/career-banner.jpg"; // add your banner image here
+import career from "../../assets/career.jpg"; // add your banner image here
 import Contact from "../ContactPage/ContactPage";
 
 function Career() {
@@ -8,10 +8,10 @@ function Career() {
     <div className="career-page">
       {/* Banner Section */}
       <div className="career-banner">
-        <img src="" alt="Career Guidance Banner" className="banner-img" />
-        <div className="banner-overlay">
+        <img src={career} alt="Career Guidance Banner" className="banner-img" />
+        {/* <div className="banner-overlay">
           <h1>Career Guidance & Counselling Support</h1>
-        </div>
+        </div> */}
       </div>
 
       {/* Main Content */}
@@ -49,7 +49,7 @@ function Career() {
           community.
         </p>
       </div>
-      <Career />
+      <Contact/>
     </div>
   );
 }

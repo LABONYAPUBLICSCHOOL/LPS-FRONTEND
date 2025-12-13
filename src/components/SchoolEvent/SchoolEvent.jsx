@@ -1,42 +1,43 @@
 import React, { useEffect, useRef } from "react";
 import "./SchoolEvent.css";
 import { Link } from "react-router-dom";
+import event from '../../assets/event.jpg'
 
 const events = [
   {
     id: 1,
     title: "Annual Day Celebrations 2025",
-    img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
+    img: event,
     link: "/events/annual-day",
   },
   {
     id: 2,
     title: "Indian University Fair 2025",
-    img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
+    img: event,
     link: "/events/indian-university-fair",
   },
   {
     id: 3,
     title: "Prism 2025 - Primary School Fest",
-    img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
+    img: event,
     link: "/events/prism-2025",
   },
   {
     id: 4,
     title: "International University Fair 2025",
-    img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
+    img: event,
     link: "/events/international-university-fair",
   },
   {
     id: 5,
     title: "Investiture Ceremony 2025",
-    img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
+    img: event,
     link: "/events/investiture-ceremony",
   },
   {
     id: 6,
     title: "Sports Meet 2025",
-    img: "https://www.scis.co.in/images/images-2025/IndianUniversityFair-2025.jpg",
+    img: event,
     link: "/events/sports-meet",
   },
 ];

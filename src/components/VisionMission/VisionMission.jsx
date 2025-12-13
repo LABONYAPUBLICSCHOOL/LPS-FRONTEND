@@ -1,8 +1,8 @@
 import React from "react";
 import "./VisionMission.css";
-// import banner from "../assets/banner.jpg";
-// import visionImg from "../assets/vision.jpg";
-// import missionImg from "../assets/mission.jpg";
+import banner from "../../assets/Vision-Mission.jpg";
+import Vision from "../../assets/vision.jpg";
+import Mission from "../../assets/mission.jpeg";
 import Contact from "../ContactPage/ContactPage";
 
 function VisionMission() {
@@ -10,7 +10,7 @@ function VisionMission() {
     <div className="vision-mission">
       {/* Banner Image */}
       <div className="banner">
-        <img src="#" alt="School Banner" />
+        <img src={banner} alt="School Banner" />
       </div>
 
       {/* About Us */}
@@ -67,7 +67,7 @@ function VisionMission() {
             </p>
           </div>
           <div className="vision-img">
-            <img src="#" alt="Vision" />
+            <img src={Vision} alt="Vision" />
           </div>
         </div>
       </section>
@@ -76,7 +76,7 @@ function VisionMission() {
       <section className="mission">
         <div className="mission-content">
           <div className="mission-img">
-            <img src="#" alt="Mission" />
+            <img src={Mission} alt="Mission" />
           </div>
           <div className="mission-text">
             <h2>Mission</h2>

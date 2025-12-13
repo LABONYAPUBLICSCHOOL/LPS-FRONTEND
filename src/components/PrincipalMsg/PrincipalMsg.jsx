@@ -1,6 +1,6 @@
 import React from "react";
 import "./PrincipalMsg.css";
-// import banner from "../assets/principal-banner.jpg"; // Add your banner image
+import PM from "../../assets/PM.png"; // Add your banner image
 import Contact from "../ContactPage/ContactPage";
 
 function PrincipalMsg() {
@@ -8,9 +8,9 @@ function PrincipalMsg() {
     <div className="principal-msg">
       {/* Banner Section */}
       <div className="banner">
-        <img src="#" alt="Principal Banner" />
+        <img src={PM} alt="Principal Banner" />
         <div className="banner-text">
-          <h1>Principal's Message</h1>
+          
         </div>
       </div>
 
