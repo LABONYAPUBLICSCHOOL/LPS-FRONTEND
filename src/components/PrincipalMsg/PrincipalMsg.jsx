@@ -48,9 +48,9 @@ function PrincipalMsg() {
               <b>Warm regards,</b>
             </p>
             <p>
-              <b>Rupika Nath</b>
+              <b>Sarita Roy</b>
             </p>
-            <p>Vice Principal, Labonaya Public School</p>
+            <p>Principal, Labonaya Public School</p>
           </div>
         </div>
       </section>

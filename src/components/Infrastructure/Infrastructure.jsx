@@ -6,9 +6,9 @@ import "./Infrastructure.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const images = [
-  { id: 1, src: "/ourcampus1.jpg", alt: "Library" },
-  { id: 2, src: "/ourcampus2.jpg", alt: "Playground" },
-  { id: 3, src: "/ourcampus3.jpg", alt: "Classroom" },
+  { id: 1, src: "/ourcampus4.jpg", alt: "Library" },
+  { id: 2, src: "/ourcampus4.jpg", alt: "Playground" },
+  { id: 3, src: "/ourcampus4.jpg", alt: "Classroom" },
   { id: 4, src: "/ourcampus4.jpg", alt: "Auditorium" },
   { id: 5, src: "/ourcampus4.jpg", alt: "Computer Lab" },
 ];
