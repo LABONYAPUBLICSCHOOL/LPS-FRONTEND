@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ChooseUs.css";
-import { FaStar } from "react-icons/fa";
 
 function ChooseUs() {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,14 +42,14 @@ function ChooseUs() {
           <ul>
             {features.map((feature, index) => (
               <li key={index}>
-                <FaStar className="icon" /> {feature}
+                <span className="bullet"></span> {feature}
               </li>
             ))}
           </ul>
         </div>
 
         <div className="why-right">
-          <img src="school.jpg" alt="School" />
+          <img src="school.jpg" alt="School Building" />
         </div>
       </div>
     </section>

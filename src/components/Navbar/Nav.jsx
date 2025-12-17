@@ -1,170 +1,181 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Nav.css";
 import LPS from "../../assets/lps.png";
 
 function Nav() {
-  const [open, setOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setOpen(!open);
-    setActiveDropdown(null);
+  const toggleMobileMenu = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) setOpenDropdown(null);
   };
 
-  const toggleDropdown = (menu) => {
-    setActiveDropdown(activeDropdown === menu ? null : menu);
+  const toggleDropdown = (key) => {
+    setOpenDropdown(openDropdown === key ? null : key);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (open && !e.target.closest(".nav-container")) {
-        setOpen(false);
-        setActiveDropdown(null);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [open]);
+  const closeMenu = () => {
+    setIsOpen(false);
+    setOpenDropdown(null);
+  };
+
+  const menuItems = [
+    { label: "Home", to: "/" },
+    {
+      label: "About Us",
+      key: "about",
+      subItems: [
+        { label: "Vision & Mission", to: "/vision-mission" },
+        { label: "Principal's Message", to: "/principal-msg" },
+        { label: "Board of Directors", to: "/bod" },
+        { label: "Our Team", to: "/ourteam" },
+      ],
+    },
+    {
+      label: "Why LPS?",
+      key: "why",
+      subItems: [
+        { label: "Curriculum", to: "/curriculum" },
+        { label: "Sports", to: "/sports" },
+        { label: "Career Guidance", to: "/career" },
+        { label: "Mental Wellbeing", to: "/mental" },
+        { label: "Our Campus", to: "/our-campus" },
+      ],
+    },
+    { label: "LPS Wing", to: "/lps-wing" },
+    {
+      label: "Events",
+      key: "events",
+      subItems: [{ label: "School Events", to: "/events" }],
+    },
+    {
+      label: "Contact Us",
+      key: "contact",
+      subItems: [
+        { label: "Contact Info", to: "/contact-info" },
+        {
+          label: "How to Reach",
+          href: "https://maps.app.goo.gl/X8QsbfwgQN5ha5xJ9",
+          external: true,
+        },
+        { label: "Work with Us", to: "/workwithus" },
+      ],
+    },
+  ];
 
   return (
-    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+    <nav className={`nav ${scrolled ? "nav-scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <Link to="/" onClick={() => setOpen(false)}>
-            <img src={LPS} alt="School Logo" />
+          <Link to="/" onClick={closeMenu}>
+            <img src={LPS} alt="LPS Logo" className="logo-img" />
           </Link>
         </div>
 
-        <ul className={`nav-links ${open ? "active" : ""}`}>
-          <li>
-            <Link to="/" onClick={() => setOpen(false)}>
-              Home
-            </Link>
-          </li>
-
-          <li
-            className={`dropdown ${activeDropdown === "about" ? "open" : ""}`}
-          >
-            <span onClick={() => toggleDropdown("about")}>
-              About Us{" "}
-              {activeDropdown === "about" ? <FaChevronUp /> : <FaChevronDown />}
-            </span>
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/vision-mission">Vision & Mission</Link>
-              </li>
-              <li>
-                <Link to="/principal-msg">Principal's Message</Link>
-              </li>
-              <li>
-                <Link to="/bod">Board of Directors</Link>
-              </li>
-              <li>
-                <Link to="/ourteam">Our Team</Link>
-              </li>
-              {/* <li>
-                <Link to="/batch-photos">SCIS Batch Photographs</Link>
-              </li> */}
-            </ul>
-          </li>
-
-          <li className={`dropdown ${activeDropdown === "why" ? "open" : ""}`}>
-            <span onClick={() => toggleDropdown("why")}>
-              Why LPS?{" "}
-              {activeDropdown === "why" ? <FaChevronUp /> : <FaChevronDown />}
-            </span>
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/curriculum">Curriculum</Link>
-              </li>
-              <li>
-                <Link to="/sports">Sports</Link>
-              </li>
-              <li>
-                <Link to="/career">Career Guidance</Link>
-              </li>
-              <li>
-                <Link to="/mental">Mental Wellbeing</Link>
-              </li>
-              <li>
-                <Link to="/our-campus">Our Campus</Link>
-              </li>
-              {/* <li>
-                <Link to="/scouting">Scouting</Link>
-              </li> */}
-            </ul>
-          </li>
-
-          <li>
-            <Link to="/lps-wing">LPS Wing</Link>
-          </li>
-
-          <li
-            className={`dropdown ${activeDropdown === "events" ? "open" : ""}`}
-          >
-            <span onClick={() => toggleDropdown("events")}>
-              Events{" "}
-              {activeDropdown === "events" ? (
-                <FaChevronUp />
+        {/* Desktop Menu */}
+        <ul className="nav-menu desktop-menu">
+          {menuItems.map((item) => (
+            <li key={item.label} className="nav-item">
+              {item.subItems ? (
+                <div className="dropdown">
+                  <button className="dropbtn">
+                    {item.label}
+                    <FaChevronDown className="chevron" />
+                  </button>
+                  <ul className="dropdown-content">
+                    {item.subItems.map((sub) => (
+                      <li key={sub.label}>
+                        {sub.external ? (
+                          <a
+                            href={sub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {sub.label}
+                          </a>
+                        ) : (
+                          <Link to={sub.to} onClick={closeMenu}>
+                            {sub.label}
+                          </Link>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ) : (
-                <FaChevronDown />
+                <Link to={item.to} onClick={closeMenu}>
+                  {item.label}
+                </Link>
               )}
-            </span>
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/events">School Events</Link>
-              </li>
-              {/* <li>
-                <Link to="/testimonial">Testimonials</Link>
-              </li> */}
-            </ul>
-          </li>
-
-          <li
-            className={`dropdown ${activeDropdown === "contact" ? "open" : ""}`}
-          >
-            <span onClick={() => toggleDropdown("contact")}>
-              Contact Us{" "}
-              {activeDropdown === "contact" ? (
-                <FaChevronUp />
-              ) : (
-                <FaChevronDown />
-              )}
-            </span>
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/contact-info">Contact Info</Link>
-              </li>
-              <li>
-                <a
-                  href="https://maps.app.goo.gl/X8QsbfwgQN5ha5xJ9"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  How to Reach
-                </a>
-              </li>
-              <li>
-                <Link to="/workwithus">Work with Us</Link>
-              </li>
-            </ul>
-          </li>
+            </li>
+          ))}
         </ul>
 
-        <div className="nav-toggle" onClick={toggleMenu}>
-          {open ? <FaTimes /> : <FaBars />}
+        {/* Mobile Toggle */}
+        <div className="mobile-toggle" onClick={toggleMobileMenu}>
+          {isOpen ? <FaTimes /> : <FaBars />}
         </div>
+
+        {/* Mobile Menu */}
+        <ul className={`nav-menu mobile-menu ${isOpen ? "active" : ""}`}>
+          {menuItems.map((item) => (
+            <li key={item.label} className="mobile-nav-item">
+              {item.subItems ? (
+                <div
+                  className={`mobile-dropdown ${
+                    openDropdown === item.key ? "open" : ""
+                  }`}
+                  onClick={() => toggleDropdown(item.key)}
+                >
+                  <span className="mobile-dropbtn">
+                    {item.label}
+                    <FaChevronDown
+                      className={`mobile-chevron ${
+                        openDropdown === item.key ? "rotated" : ""
+                      }`}
+                    />
+                  </span>
+                  <ul className="mobile-dropdown-content">
+                    {item.subItems.map((sub) => (
+                      <li key={sub.label}>
+                        {sub.external ? (
+                          <a
+                            href={sub.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={closeMenu}
+                          >
+                            {sub.label}
+                          </a>
+                        ) : (
+                          <Link to={sub.to} onClick={closeMenu}>
+                            {sub.label}
+                          </Link>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <Link to={item.to} onClick={closeMenu}>
+                  {item.label}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
