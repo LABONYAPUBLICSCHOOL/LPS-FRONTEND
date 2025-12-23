@@ -4,7 +4,8 @@ import "./Slider.css";
 function Slider() {
   const images = [
     "/img1.jpg",
-    "/img2.jpg",
+    "/img2.JPG",
+    "/img3.jpg"
   ];
 
   const [current, setCurrent] = useState(0);
