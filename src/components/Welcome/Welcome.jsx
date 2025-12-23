@@ -38,7 +38,7 @@ function Welcome() {
             Welcome To <span className="heading">Labonya Public School</span>
           </h2>
           <p>
-            Labonya Public School, established in 2009, envisions the cultivation 
+            Labonya Public School, established in 2017, envisions the cultivation 
             of young minds into truly global citizens within a nurturing and 
             compassionate atmosphere. The pulsating vitality permeates through the 
             students and teachers, creating a vibrant and dynamic learning environment.

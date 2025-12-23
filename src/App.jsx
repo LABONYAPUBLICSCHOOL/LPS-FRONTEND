@@ -52,7 +52,7 @@ function App() {
         />
         <Route path="/vision-mission" element={<VisionMission />} />
         <Route path="/principal-msg" element={<PrincipalMsg />} />
-        <Route path="/bod" element={<Bod />} />
+        {/* <Route path="/bod" element={<Bod />} /> */}
         <Route path="/ourteam" element={<OurTeam />} />
         <Route path="/sports" element={<Sports />} />
         <Route path="/career" element={<Career />} />

@@ -19,13 +19,13 @@ function PrincipalMsg() {
         <div className="message-card">
           <h2>Dear Parents and Guardians,</h2>
           <p>
-            As we continue on our journey at <b>Labonaya Public School</b>, I
+            As we continue on our journey at <b>Labonya Public School</b>, I
             would like to take a moment to reaffirm our commitment to providing
             a world-class education that fosters academic excellence, personal
             growth, and a sense of community.
           </p>
           <p>
-            As the Vice Principal and Acting Principal, I am honored to lead our
+            As the Principal, I am honored to lead our
             school community and ensure that our mission and values remain at
             the forefront of everything we do. Our team of dedicated educators
             and staff are passionate about creating a safe, inclusive, and
@@ -50,7 +50,7 @@ function PrincipalMsg() {
             <p>
               <b>Sarita Roy</b>
             </p>
-            <p>Principal, Labonaya Public School</p>
+            <p>Principal, Labonya Public School</p>
           </div>
         </div>
       </section>

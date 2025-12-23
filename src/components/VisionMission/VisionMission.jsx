@@ -17,13 +17,9 @@ function VisionMission() {
       <section className="about">
         <h2>About Us</h2>
         <p>
-          Labonaya Public School, located in the heart of Kolkata, is a premier
+          Labonya Public School, located in the Salkia,Howrah is a premier
           institution known for its commitment to holistic education and
-          academic excellence. It is housed in a 5 storied building comprising a
-          built-up area of 127000 sq.ft.(approx.) and a campus area of 3.6
-          acres. Established with the vision of nurturing global citizens, the
-          school follows an international curriculum - IGCSE (Cambridge) and is
-          also affiliated to the CISCE.
+          academic excellence.Established with the vision of nurturing global citizens.
         </p>
         <p>
           The campus is equipped with state-of-the-art infrastructure designed
@@ -34,16 +30,15 @@ function VisionMission() {
         </p>
         <p>
           Sports and co-curricular activities are given significant importance,
-          with multi-sports facilities and well-maintained playground. The
-          school also houses a music room, dance room, art studio, and robotics
+          with multi-sports facilities. The school also houses a music room, dance room, art studio, and robotics
           lab, ensuring an all-rounded development environment. With its
-          world-class amenities and dedicated faculty, Labonaya Public School
+          world-class amenities and dedicated faculty, Labonya Public School
           stands as a beacon of quality education in the region.
         </p>
         <p>
-          It has been 16 years since the inception of the school and the school
+          It has been 8 years since the inception of the school and the school
           is running successfully with the assistance and cooperation from all
-          stakeholders.
+          Faculty.
         </p>
         <p>
           So if you are looking for the perfect school to nurture your child’s
@@ -58,7 +53,7 @@ function VisionMission() {
           <div className="vision-text">
             <h2>Vision</h2>
             <p>
-              Labonaya Public School is committed to delivering a transformative
+              Labonya Public School is committed to delivering a transformative
               education that equips students for a dynamic world. Our
               collaborative environment ignites a passion for growth, enabling
               students to become proactive leaders. With excellence as our
@@ -66,18 +61,13 @@ function VisionMission() {
               future for all.
             </p>
           </div>
-          <div className="vision-img">
-            <img src={Vision} alt="Vision" />
-          </div>
         </div>
       </section>
 
       {/* Mission */}
       <section className="mission">
         <div className="mission-content">
-          <div className="mission-img">
-            <img src={Mission} alt="Mission" />
-          </div>
+      
           <div className="mission-text">
             <h2>Mission</h2>
             <p>

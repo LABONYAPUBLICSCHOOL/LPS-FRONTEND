@@ -22,14 +22,16 @@ function ChooseUs() {
   }, []);
 
   const features = [
-    "English–medium co-ed school located in Salkia, Howrah",
-    "Kindergarten & Primary levels offered in a secure environment",
+    "Co-Educational English Medium located in Salkia, Howrah",
+    "Kindergarden & Primary levels offered in a secure environment",
     "Dedicated and motivated faculty committed to student growth",
     "Curriculum designed to build global thinking with strong value foundation",
     "Emphasis on technology-aware learning for today’s learners",
     "Focus on creativity, problem-solving & critical thinking",
     "Active parent-teacher communication & collaboration",
     "Inclusive support for learners with diverse academic needs",
+    "Following ICSE & ISC Curriculum",
+    "In School Student Counsellor"
   ];
 
   return (

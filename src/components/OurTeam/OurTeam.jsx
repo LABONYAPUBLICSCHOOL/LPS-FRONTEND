@@ -5,24 +5,53 @@ import Contact from "../ContactPage/ContactPage";
 // Sample data for teachers (images left blank for now)
 const teachers = [
   {
-    id: 1,
-    name: "Mr. Paresh Nath Thakur",
-    occupation: "Discipliner Incharge",
-    photo: "/1.jpeg",
-  },
-  { id: 2, name: "Ms. Riya Deb", occupation: "Head of Cultural Programs & Events", photo: "/2.jpeg" },
-  {
     id: 3,
     name: "Ms. Dipa Bose",
     occupation: "PLAY HOUSE - UKG (HOD)",
     photo: "/3.jpeg",
   },
-  { id: 4, name: "Mr. Ravi Shukla", occupation: "Class V-IX(HOD)", photo: "/4.jpeg" },
-  { id: 5, name: "Mr. Shivam Sundar Lal", occupation: "Class X-XII(HOD)", photo: "/5.jpeg" },
-  { id: 6, name: "Ms. Sweety Barma", occupation: "Examination Incharge(Junior Section)", photo: "/6.jpeg" },
-  { id: 7, name: "Ms. Sarmistha Chowdhury", occupation: "Student Counsellor", photo: "/7.jpeg" },
-  { id: 8, name: "Ms. Puja Agarwal", occupation: "Class I-IV(HOD)", photo: "/8.jpeg" },
-  // Add more teachers as needed
+  {
+    id: 8,
+    name: "Ms. Puja Agarwal",
+    occupation: "Class I-IV(HOD)",
+    photo: "/8.jpeg",
+  },
+  {
+    id: 4,
+    name: "Mr. Ravi Shukla",
+    occupation: "Class V-VIII(HOD)",
+    photo: "/4.jpeg",
+  },
+  {
+    id: 5,
+    name: "Mr. Shivam Sundar Lal",
+    occupation: "Class IX-XII(HOD)",
+    photo: "/5.jpeg",
+  },
+  {
+    id: 1,
+    name: "Mr. Paresh Nath Thakur",
+    occupation: "Discipliner Incharge",
+    photo: "/1.jpeg",
+  },
+  {
+    id: 2,
+    name: "Ms. Riya Deb",
+    occupation: "Head of Cultural Programs & Events",
+    photo: "/2.jpeg",
+  },
+  {
+    id: 6,
+    name: "Ms. Sweety Barma",
+    occupation: "Examination Incharge(Junior Section)",
+    photo: "/6.jpeg",
+  },
+  {
+    id: 7,
+    name: "Ms. Sarmistha Chowdhury",
+    occupation: "Student Counsellor",
+    photo: "/7.jpeg",
+  },
 ];
 
 function OurTeam() {
