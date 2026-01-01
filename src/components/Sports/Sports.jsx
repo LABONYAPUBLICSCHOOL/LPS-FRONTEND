@@ -28,6 +28,7 @@ function Sports() {
         <h2>
           Sports at Labonaya Public School: Unleashing Athletic Excellence
         </h2>
+
         <p>
           At Labonaya Public School, we believe that sports play a vital role in
           shaping the minds and bodies of our students. Our comprehensive sports
@@ -40,18 +41,10 @@ function Sports() {
         <ul>
           <li>Football</li>
           <li>Cricket</li>
-          <li>Basketball</li>
           <li>Badminton</li>
           <li>Carrom</li>
-          <li>Volleyball</li>
-          <li>Kho-Kho</li>
-          <li>Table Tennis</li>
           <li>Chess</li>
-          <li>Gymnastics</li>
-          <li>Skating</li>
-          <li>Rugby</li>
           <li>Karate</li>
-          <li>Athletics</li>
         </ul>
 
         <h3>Expert Coaching and Mentorship</h3>
@@ -87,11 +80,15 @@ function Sports() {
       {/* Gallery Section */}
       <div className="sports-gallery">
         <h2>{selectedSport} Gallery</h2>
+
         <div className="gallery-grid">
           {sportsGallery[selectedSport].map((img, index) => (
             <div key={index} className="gallery-card">
               {img ? (
-                <img src={img} alt={`${selectedSport} ${index}`} />
+                <img
+                  src={img}
+                  alt={`${selectedSport} ${index}`}
+                />
               ) : (
                 <div className="placeholder">No Image</div>
               )}
@@ -99,6 +96,7 @@ function Sports() {
           ))}
         </div>
       </div>
+
       <Contact />
     </div>
   );

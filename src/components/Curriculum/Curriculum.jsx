@@ -23,8 +23,7 @@ export default function Curriculum() {
         <h2>Toddlers</h2>
         <p>
           Pre-school, which comprises Early Childhood Care and Education (ECCE)
-          begins at a tender age of 2 years. We are proud to announce that South
-          City International School is beginning its first Toddlers Section
+          begins at a tender age of 2 years. We are proud to announce that Labonya Public School is beginning its first Toddlers Section
           named <strong>Little Explorers</strong>. At this level, the children
           will be introduced to a more structured day with stimulating
           activities, group interactions etc. Children at this age will start
