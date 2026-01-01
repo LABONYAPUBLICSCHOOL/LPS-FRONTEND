@@ -12,7 +12,7 @@ function LpsWing() {
       <div className="lpswing-content fade-up">
         <p>
           At{" "}
-          <b>Labonaya Public School – Cambridge International Education Wing</b>
+          <b>Labonaya Public School</b>
           , we believe every student is unique. Every student has the potential
           to rise, and therefore we guide them to be reflective thinkers,
           open-minded inquirers, knowledgeable communicators, principled doers,
@@ -21,14 +21,15 @@ function LpsWing() {
       </div>
 
       <div className="lpswing-section fade-up">
-        <h2>Faculty & Staff</h2>
-        <p>
-          Our teachers are highly experienced in International & Cambridge
-          education systems, with 10–30+ years of teaching experience in reputed
-          international schools. They bring excellence and passion into every
-          classroom interaction.
-        </p>
-      </div>
+  <h2>Faculty & Staff</h2>
+  <p>
+    Our faculty comprises highly qualified and dedicated educators with
+    <b> 10–20 years of teaching experience</b> in reputed national institutions.
+    They bring academic excellence, commitment, and passion into every
+    classroom, ensuring holistic development and individualized attention
+    for each student.
+  </p>
+</div>
 
       <div className="lpswing-section fade-up">
         <h2>Academics</h2>
@@ -51,58 +52,72 @@ function LpsWing() {
       </div>
 
       <div className="lpswing-section fade-up">
-        <h2>Courses</h2>
-        <p>
-          The <b>Cambridge Lower Secondary</b> curriculum forms the base of
-          learning for Grades VI–VIII.
-          <b> Cambridge IGCSE</b> and <b>A Levels</b> follow for higher grades,
-          accepted globally for advanced studies. Students typically select 4–5
-          subjects, balancing depth with independent study.
-        </p>
-        <p>
-          Our approach integrates <b>VARK learning styles</b> — using PowerPoint
-          presentations, videos, group discussions, and role-plays to cater to
-          diverse learners.
-        </p>
-        <p>
-          Cambridge learners use <b>metacognition</b> — planning, executing, and
-          evaluating their learning outcomes — a key strength of our academic
-          philosophy.
-        </p>
-      </div>
+  <h2>Courses</h2>
+  <p>
+    Labonya Public School follows a <b>Co-Educational English Medium</b> curriculum.
+    For the middle school stage (Classes VI–VIII), students are introduced to a
+    strong academic foundation aligned with the <b>ICSE pattern</b>.
+  </p>
+  <p>
+    In the secondary stage, the school offers the <b>ICSE Curriculum (Classes IX–X)</b>,
+    emphasizing conceptual clarity, analytical skills, and balanced subject learning.
+  </p>
+  <p>
+    For higher secondary education, the <b>ISC Curriculum (Classes XI–XII)</b> is
+    followed, preparing students for national and international higher education.
+    Students generally choose <b>4–5 subjects</b>, allowing both depth of study and
+    independent learning.
+  </p>
+</div>
+
+
+     <div className="lpswing-section fade-up">
+  <h2>Career Counselling</h2>
+  <p>
+    At <b>Labonya Public School (LPS)</b>, students receive structured and
+    personalized career guidance from subject teachers and the
+    <b> school counsellor</b>. Beginning at the end of <b>Class VIII</b>,
+    students are guided in selecting appropriate subjects for the
+    <b> ICSE curriculum</b>.
+  </p>
+  <p>
+    During the <b>ISC stage (Classes XI–XII)</b>, focused career and college
+    counselling is provided to help students identify their interests,
+    strengths, and future pathways, ensuring well-informed academic and
+    career decisions.
+  </p>
+</div>
+
 
       <div className="lpswing-section fade-up">
-        <h2>Career Counselling</h2>
-        <p>
-          At the end of Grade 8, students receive personalized guidance from
-          subject teachers and our <b>Guidance Counsellor</b> to select subjects
-          for IGCSE. Later, in A Levels, college counselling begins, ensuring
-          smooth university transitions and informed career choices.
-        </p>
-      </div>
+  <h2>Why LPS</h2>
+  <p>
+    At <b>Labonya Public School (LPS)</b>, we believe that
+    <b> every student has the ability to be a successful learner</b>.
+    Our approach focuses on nurturing strong academic foundations,
+    character development, and confidence in every child.
+  </p>
+  <p>
+    Success at LPS goes beyond examination results. We emphasize
+    personal growth, lifelong learning, and the skills required to
+    think independently, lead responsibly, and achieve one’s goals
+    with confidence and integrity.
+  </p>
+</div>
 
-      <div className="lpswing-section fade-up">
-        <h2>Why LPS Cambridge Wing</h2>
-        <p>
-          We believe, as Warren G. Harding once said, “Every student has the
-          ability to be a successful learner.” At LPS, we strive to help every
-          learner build strong connections and achieve their goals. Success is
-          not just about grades but about personal fulfillment, lifelong
-          learning, and the confidence to dream and achieve.
-        </p>
-      </div>
-
-      <div className="lpswing-section fade-up">
-        <h2>Leadership</h2>
-        <p>
-          <b>Head CAIE:</b> Ms. Angshumitra Chakrabarti (34+ years of experience
-          in teaching International Curriculum)
-        </p>
-        <p>
-          <b>Lower Secondary Co-ordinator:</b> Ms. Akshita Paulchowdhuri (20
-          years of dedicated service in education)
-        </p>
-      </div>
+     <div className="lpswing-section fade-up">
+  <h2>Leadership</h2>
+  <p>
+    <b>Head – Academics:</b> A senior education professional with over
+    <b> 30+ years of experience</b> in academic leadership, curriculum
+    planning, and institutional development.
+  </p>
+  <p>
+    <b>Lower Secondary Coordinator:</b> An experienced educator with
+    <b> 20+ years of dedicated service</b> in teaching, mentoring, and
+    student development.
+  </p>
+</div>
       <Contact />
     </div>
   );

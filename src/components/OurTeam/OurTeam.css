@@ -1,9 +1,13 @@
 .our-team {
   font-family: 'Poppins', sans-serif;
   color: #333;
-  padding: 50px 20px;
+  padding: 100px 20px 50px; /* extra top padding */
   text-align: center;
 }
+.our-team {
+  scroll-margin-top: 100px; /* height of navbar */
+}
+
 
 /* Section Title */
 .our-team h2 {
@@ -115,5 +119,12 @@
 
   .our-team h2 {
     font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .our-team {
+    padding-top: 120px; /* more space for mobile navbar */
   }
 }

@@ -39,7 +39,7 @@ function Nav() {
       subItems: [
         { label: "Vision & Mission", to: "/vision-mission" },
         { label: "Principal's Message", to: "/principal-msg" },
-        { label: "Board of Directors", to: "/bod" },
+        // { label: "Board of Directors", to: "/bod" },
         { label: "Our Team", to: "/ourteam" },
       ],
     },
