@@ -1,6 +1,6 @@
 import React from "react";
-import "../css/Events.css";  // Your existing styles
-import Contact from "../components/ContactPage/ContactPage";
+import "./Events.css";  // Your existing styles
+import Contact from "../ContactPage/ContactPage";
 import { Link } from "react-router-dom";
 
 const schoolEvents = [
