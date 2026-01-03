@@ -1,35 +1,31 @@
 import React from "react";
-import "./Events.css";
-import Contact from "../../components/ContactPage/ContactPage";
+import "../css/Events.css";  // Your existing styles
+import Contact from "../components/ContactPage/ContactPage";
 import { Link } from "react-router-dom";
 
 const schoolEvents = [
- 
   {
     id: 1,
-    img: "https://cdn0.weddingwire.in/vendor/4887/3_2/960/jpg/944974-903726246393198-3910239754055926696-n_15_44887.jpeg", 
-    title: "Lakshya",
-    link: "/gallery/lakshya",
-  },
-   {
-    id: 2,
-    img: "https://cdn0.weddingwire.in/vendor/4887/3_2/960/jpg/944974-903726246393198-3910239754055926696-n_15_44887.jpeg", 
+    img: "/images/events/cover-christmas-2025.jpg",  // Your best Christmas cover photo
     title: "Christmas 2025",
     link: "/gallery/christmas-2025",
   },
-
+  {
+    id: 2,
+    img: "/images/events/cover-lakshya.jpg",  // Your best Lakshya cover photo
+    title: "Lakshya",
+    link: "/gallery/lakshya",
+  },
 ];
 
 function Events() {
   return (
     <div className="event-page">
-      {/* Main Heading */}
       <header className="event-header main">
         <h1>School Events</h1>
         <p>Memorable celebrations and highlights from our school life.</p>
       </header>
 
-      {/* Events Gallery */}
       <div className="event-gallery">
         {schoolEvents.map((event) => (
           <Link key={event.id} to={event.link} className="event-card-link">
