@@ -1,87 +1,48 @@
 import React from "react";
 import "./Events.css";
 import Contact from "../../components/ContactPage/ContactPage";
+import { Link } from "react-router-dom";
 
-const sportsEvents = [
+const schoolEvents = [
+ 
   {
     id: 1,
-    img: "https://images.unsplash.com/photo-1502877338535-766e1452684a",
-    title: "Football Tournament",
+    img: "https://cdn0.weddingwire.in/vendor/4887/3_2/960/jpg/944974-903726246393198-3910239754055926696-n_15_44887.jpeg", 
+    title: "Lakshya",
+    link: "/gallery/lakshya",
   },
-  {
+   {
     id: 2,
-    img: "https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d",
-    title: "Athletics Meet",
+    img: "https://cdn0.weddingwire.in/vendor/4887/3_2/960/jpg/944974-903726246393198-3910239754055926696-n_15_44887.jpeg", 
+    title: "Christmas 2025",
+    link: "/gallery/christmas-2025",
   },
-  {
-    id: 3,
-    img: "https://images.unsplash.com/photo-1546519638-68e109498ffc",
-    title: "Cricket Championship",
-  },
-  {
-    id: 4,
-    img: "https://images.unsplash.com/photo-1604654894610-df63bc536371",
-    title: "Basketball League",
-  },
-];
 
-const danceEvents = [
-  {
-    id: 1,
-    img: "https://images.unsplash.com/photo-1520975918318-5d6a9e8b4b17",
-    title: "Cultural Dance Night",
-  },
-  {
-    id: 2,
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91",
-    title: "Solo Dance Competition",
-  },
-  {
-    id: 3,
-    img: "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb",
-    title: "Group Dance Battle",
-  },
-  {
-    id: 4,
-    img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91",
-    title: "Annual Dance Show",
-  },
 ];
 
 function Events() {
   return (
     <div className="event-page">
-      {/* Sports Events Section */}
-      <header className="event-header sports">
-        <h1>Sports Events</h1>
-        <p>Celebrating the spirit of teamwork, competition, and victory.</p>
+      {/* Main Heading */}
+      <header className="event-header main">
+        <h1>School Events</h1>
+        <p>Memorable celebrations and highlights from our school life.</p>
       </header>
+
+      {/* Events Gallery */}
       <div className="event-gallery">
-        {sportsEvents.map((event) => (
-          <div key={event.id} className="event-card">
-            <img src={event.img} alt={event.title} />
-            <div className="overlay">
-              <h3>{event.title}</h3>
+        {schoolEvents.map((event) => (
+          <Link key={event.id} to={event.link} className="event-card-link">
+            <div className="event-card">
+              <img src={event.img} alt={event.title} />
+              <div className="title-caption">
+                <h3>{event.title}</h3>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
-      {/* Dance Events Section */}
-      <header className="event-header dance">
-        <h1>Dance Events</h1>
-        <p>Feel the rhythm, embrace the moves, and express your soul.</p>
-      </header>
-      <div className="event-gallery">
-        {danceEvents.map((event) => (
-          <div key={event.id} className="event-card">
-            <img src={event.img} alt={event.title} />
-            <div className="overlay">
-              <h3>{event.title}</h3>
-            </div>
-          </div>
-        ))}
-      </div>
       <Contact />
     </div>
   );
