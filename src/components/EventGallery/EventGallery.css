@@ -1,141 +1,128 @@
-/* ================= MAIN ================= */
-.event-gallery {
-  padding: 60px 20px 80px;
-  max-width: 1300px;
-  margin: auto;
-  font-family: 'Poppins', sans-serif;
+
+.gallery-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px;
 }
 
-/* ================= HERO ================= */
-.gallery-hero {
+.gallery-header {
+  padding: 30px 20px;
   text-align: center;
-  margin-bottom: 50px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eee;
 }
 
-.gallery-hero h2 {
-  font-size: 2.6rem;
-  font-weight: 600;
-  margin-bottom: 12px;
+.gallery-header h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #333;
 }
 
-.gallery-hero p {
-  font-size: 1.05rem;
-  color: #64748b;
-}
-
-/* ================= GRID ================= */
-.gallery-grid {
+.photo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0; /* No gap between images */
+  width: 100%;
 }
 
-/* ================= CARD ================= */
-.gallery-card {
-  position: relative;
-  height: 260px;
-  border-radius: 18px;
-  overflow: hidden;
+.photo-item {
+  width: 100%;
+  height: 250px;
   cursor: pointer;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.gallery-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-}
-
-/* Image */
-.gallery-card img {
+.photo-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.gallery-card:hover img {
-  transform: scale(1.08);
+.photo-item:hover img {
+  transform: scale(1.05);
 }
 
-/* Overlay */
-.image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.15)
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-card:hover .image-overlay {
-  opacity: 1;
-}
-
-.image-overlay span {
-  background: white;
-  color: #1e293b;
-  padding: 10px 22px;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-/* ================= MODAL ================= */
 .image-modal {
   position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  max-height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  animation: fadeIn 0.3s ease;
 }
 
-.image-modal img {
-  max-width: 92%;
-  max-height: 88%;
-  border-radius: 14px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
 }
 
-.close-btn {
+.image-counter {
   position: absolute;
-  top: 22px;
-  right: 30px;
-  font-size: 42px;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
   color: white;
-  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
-/* ================= ANIMATION ================= */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-  to {
-    opacity: 1;
+  
+  .photo-item {
+    height: 200px;
+  }
+  
+  .gallery-header h1 {
+    font-size: 1.8rem;
   }
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 600px) {
-  .gallery-hero h2 {
-    font-size: 1.9rem;
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
+  
+  .photo-item {
+    height: 150px;
+  }
+  
+  .gallery-header {
+    padding: 20px 15px;
+  }
+  
+  .gallery-header h1 {
+    font-size: 1.6rem;
+  }
+}
 
-  .gallery-hero p {
-    font-size: 0.95rem;
-  }
-
-  .gallery-card {
-    height: 220px;
-  }
+.photo-item img {
+  background: #f5f5f5;
 }

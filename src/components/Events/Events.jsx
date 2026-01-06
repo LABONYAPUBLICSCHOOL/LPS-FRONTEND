@@ -14,7 +14,7 @@ const schoolEvents = [
     id: 2,
     img: "/Lakshya/1000028122.JPG",  // Your best Lakshya cover photo
     title: "Lakshya",
-    link: "/gallery/lakshya",
+    link: "/gallery/laksh",
   },
 ];
 

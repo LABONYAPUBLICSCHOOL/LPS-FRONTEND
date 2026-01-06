@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import "./EventGallery.css";
 
 const images = [
-  "/Christmas/1.jpeg",
-  "/Christmas/2.jpeg",
-  "/Christmas/3.jpeg",
-  "/Christmas/4.jpeg",
-  "/Christmas/5.jpeg",
+  "/Lakshya/1000028254.JPG",
+  "/Lakshya/1000028166.JPG",
+  "/Lakshya/1000028148.JPG",
+  "/Lakshya/1000028152.JPG",
+  "/Lakshya/1000028160.JPG",
 ];
 
-function Christmas() {
+function Lakshya() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
     <div className="gallery-page">
       {/* Simple Header */}
       <header className="gallery-header">
-        <h1>Christmas 2025</h1>
+        <h1>Laksh</h1>
       </header>
 
       {/* Tight Grid - No Gap Between Images */}
@@ -55,4 +55,4 @@ function Christmas() {
   );
 }
 
-export default Christmas;
+export default Lakshya;
