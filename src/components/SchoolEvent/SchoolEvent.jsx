@@ -1,44 +1,43 @@
 import React, { useEffect, useRef } from "react";
 import "./SchoolEvent.css";
 import { Link } from "react-router-dom";
-import event from '../../assets/event.jpg'
 
 const events = [
   {
     id: 1,
-    title: "Annual Day Celebrations 2025",
-    img: event,
-    link: "/events/annual-day",
+    title: "Lakshya 2025",
+    img: "/Lakshya/1000028152.JPG",
+    // link: "/events/annual-day",
   },
   {
     id: 2,
-    title: "Indian University Fair 2025",
-    img: event,
-    link: "/events/indian-university-fair",
+    title: "Lakshya 2025",
+    img: "/Lakshya/1000028164.JPG",
+    // link: "/events/indian-university-fair",
   },
   {
     id: 3,
-    title: "Prism 2025 - Primary School Fest",
-    img: event,
-    link: "/events/prism-2025",
+    title: "Lakshya 2025",
+    img: "/Lakshya/1000028158.JPG",
+    // link: "/events/prism-2025",
   },
   {
     id: 4,
-    title: "International University Fair 2025",
-    img: event,
-    link: "/events/international-university-fair",
+    title: "Lakshya 2025",
+    img: "/Lakshya/1000028250.JPG",
+    // link: "/events/international-university-fair",
   },
   {
     id: 5,
-    title: "Investiture Ceremony 2025",
-    img: event,
-    link: "/events/investiture-ceremony",
+    title: "Lakshya 2025",
+    img: "/Lakshya/1000028114.JPG",
+    // link: "/events/investiture-ceremony",
   },
   {
     id: 6,
-    title: "Sports Meet 2025",
-    img: event,
-    link: "/events/sports-meet",
+    title: "Lakshya 2025",
+    img: "/Lakshya/1000028140.JPG",
+    // link: "/events/sports-meet",
   },
 ];
 

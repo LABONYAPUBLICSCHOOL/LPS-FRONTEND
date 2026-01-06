@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const schoolEvents = [
   {
     id: 1,
-    img: "/images/events/cover-christmas-2025.jpg",  // Your best Christmas cover photo
+    img: "/Christmas/8.jpeg",  // Your best Christmas cover photo
     title: "Christmas 2025",
     link: "/gallery/christmas-2025",
   },
   {
     id: 2,
-    img: "/images/events/cover-lakshya.jpg",  // Your best Lakshya cover photo
+    img: "/Lakshya/1000028122.JPG",  // Your best Lakshya cover photo
     title: "Lakshya",
     link: "/gallery/lakshya",
   },

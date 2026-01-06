@@ -17,6 +17,14 @@ function Nav() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // ✅ ADDED: lock body scroll when mobile menu open (NO UI CHANGE)
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
     if (!isOpen) setOpenDropdown(null);
@@ -39,7 +47,6 @@ function Nav() {
       subItems: [
         { label: "Vision & Mission", to: "/vision-mission" },
         { label: "Principal's Message", to: "/principal-msg" },
-        // { label: "Board of Directors", to: "/bod" },
         { label: "Our Team", to: "/ourteam" },
       ],
     },

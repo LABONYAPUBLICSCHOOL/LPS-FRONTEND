@@ -24,53 +24,52 @@ import Events from "./components/Events/Events";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Curriculum from "./components/Curriculum/Curriculum";
 import ScrollToTop from "./components/ScrollTop/ScrollTop";
+import Christmas from "./components/EventGallery/Christmas";
+
 
 function App() {
   return (
     <>
-    <ScrollToTop/>
+      <ScrollToTop />
+
       <TopNav />
       <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Slider />
-              <Welcome />
-              <WhyChooseUs />
-              <SchoolEvents />
-              <Infrastructure />
-              <Testimonial />
-              <ContactPage />
+      {/* MAIN CONTENT WRAPPER */}
+      <div className="main-content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Slider />
+                <Welcome />
+                <WhyChooseUs />
+                <SchoolEvents />
+                <Testimonial />
+              </>
+            }
+          />
 
-            </>
+          <Route path="/vision-mission" element={<VisionMission />} />
+          <Route path="/principal-msg" element={<PrincipalMsg />} />
+          <Route path="/ourteam" element={<OurTeam />} />
+          <Route path="/sports" element={<Sports />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/mental" element={<Mental />} />
+          <Route path="/our-campus" element={<OurCampus />} />
+          <Route path="/lps-wing" element={<LpsWing />} />
+          <Route path="/workwithus" element={<WorkWithUs />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/testimonial" element={<Testimonial />} />
+          <Route path="/curriculum" element={<Curriculum />} />
+          <Route path="/gallery/christmas-2025" element={<Christmas />} />
+        </Routes>
 
-          }
+        <ContactPage />
+      </div>
 
-        />
-        <Route path="/vision-mission" element={<VisionMission />} />
-        <Route path="/principal-msg" element={<PrincipalMsg />} />
-        {/* <Route path="/bod" element={<Bod />} /> */}
-        <Route path="/ourteam" element={<OurTeam />} />
-        <Route path="/sports" element={<Sports />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/mental" element={<Mental />} />
-        <Route path="/our-campus" element={<OurCampus />} />
-        <Route path="/lps-wing" element={<LpsWing />} />
-        <Route path="/contact-info" element={<ContactPage />} />
-        <Route path="/workwithus" element={<WorkWithUs />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/testimonial" element={<Testimonial />} />
-        <Route path="/curriculum" element={<Curriculum />} />
-
-
-
-
-
-      </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

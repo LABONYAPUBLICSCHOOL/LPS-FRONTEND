@@ -53,6 +53,10 @@
   align-items: center;
   gap: 28px;
 }
+.main-content {
+  padding-top: 80px;
+}
+
 
 @media (min-width: 1024px) {
   .desktop-menu {

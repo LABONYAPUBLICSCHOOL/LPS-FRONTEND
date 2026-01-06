@@ -4,7 +4,7 @@ import "./Slider.css";
 function Slider() {
   const images = [
     "/img1.jpg",
-    "/img2.JPG",
+    "/school.jpg",
     "/img3.jpg"
   ];
 

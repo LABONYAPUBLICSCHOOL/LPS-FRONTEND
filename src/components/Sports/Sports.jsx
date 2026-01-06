@@ -64,8 +64,8 @@ function Sports() {
         </p>
       </section>
 
-      {/* Sports Buttons */}
-      <div className="sports-buttons">
+      
+      {/* <div className="sports-buttons">
         {Object.keys(sportsGallery).map((sport) => (
           <button
             key={sport}
@@ -77,7 +77,7 @@ function Sports() {
         ))}
       </div>
 
-      {/* Gallery Section */}
+     
       <div className="sports-gallery">
         <h2>{selectedSport} Gallery</h2>
 
@@ -95,7 +95,7 @@ function Sports() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <Contact />
     </div>
