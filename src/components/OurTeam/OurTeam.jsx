@@ -1,6 +1,5 @@
 import React from "react";
 import "./OurTeam.css";
-import Contact from "../ContactPage/ContactPage";
 
 // Sample data for teachers (images left blank for now)
 const teachers = [
@@ -73,7 +72,6 @@ function OurTeam() {
           </div>
         ))}
       </div>
-      <Contact />
     </div>
   );
 }

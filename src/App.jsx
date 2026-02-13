@@ -26,6 +26,8 @@ import Curriculum from "./components/Curriculum/Curriculum";
 import ScrollToTop from "./components/ScrollTop/ScrollTop";
 import Christmas from "./components/EventGallery/Christmas";
 import Lakshya from "./components/EventGallery/Lakshya";
+import Farewell from "./components/EventGallery/Farewell";
+import Republic from "./components/EventGallery/Republic";
 
 
 function App() {
@@ -66,7 +68,8 @@ function App() {
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/gallery/christmas-2025" element={<Christmas />} />
           <Route path="/gallery/laksh" element={<Lakshya />} />
-
+          <Route path="/gallery/farewell" element={<Farewell />} />
+          <Route path="/gallery/republic" element={<Republic />} />
         </Routes>
 
         <ContactPage />

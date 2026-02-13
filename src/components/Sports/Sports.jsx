@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Sports.css";
-import Contact from "../ContactPage/ContactPage";
 
 function Sports() {
   const [selectedSport, setSelectedSport] = useState("Cricket");
@@ -97,7 +96,6 @@ function Sports() {
         </div>
       </div> */}
 
-      <Contact />
     </div>
   );
 }

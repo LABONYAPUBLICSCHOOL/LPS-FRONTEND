@@ -1,7 +1,6 @@
 import React from "react";
 import "./Career.css";
 import career from "../../assets/career.jpg"; // add your banner image here
-import Contact from "../ContactPage/ContactPage";
 
 function Career() {
   return (
@@ -49,7 +48,6 @@ function Career() {
           community.
         </p>
       </div>
-      <Contact/>
     </div>
   );
 }

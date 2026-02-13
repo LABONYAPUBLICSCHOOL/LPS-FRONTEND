@@ -1,20 +1,31 @@
 import React from "react";
-import "./Events.css";  // Your existing styles
-import Contact from "../ContactPage/ContactPage";
+import "./Events.css";  
 import { Link } from "react-router-dom";
 
 const schoolEvents = [
   {
     id: 1,
-    img: "/Christmas/8.jpeg",  // Your best Christmas cover photo
+    img: "/Christmas/8.jpeg", 
     title: "Christmas 2025",
     link: "/gallery/christmas-2025",
   },
   {
     id: 2,
-    img: "/Lakshya/1000028122.JPG",  // Your best Lakshya cover photo
+    img: "/Lakshya/1000028122.JPG",  
     title: "Laksh 2024",
     link: "/gallery/laksh",
+  },
+   {
+    id: 3,
+    img: "/Republic/1.jpg", 
+    title: "Republic Day",
+    link: "/gallery/republic",
+  },
+   {
+    id: 4,
+    img: "/Farewell/1.jpg",  
+    title: "Farewell 2025 Batch",
+    link: "/gallery/farewell",
   },
 ];
 
@@ -39,7 +50,7 @@ function Events() {
         ))}
       </div>
 
-      <Contact />
+      
     </div>
   );
 }

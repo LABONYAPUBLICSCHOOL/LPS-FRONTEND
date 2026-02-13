@@ -1,7 +1,6 @@
 import React from "react";
 import "./PrincipalMsg.css";
 import PM from "../../assets/PM.png"; // Add your banner image
-import Contact from "../ContactPage/ContactPage";
 
 function PrincipalMsg() {
   return (
@@ -54,7 +53,6 @@ function PrincipalMsg() {
           </div>
         </div>
       </section>
-      <Contact />
     </div>
   );
 }

@@ -4,7 +4,6 @@ import bod from "../../assets/bod.jpeg"; // Banner image
 // import director1 from "../assets/director1.jpg"; // Replace with actual images
 // import director2 from "../assets/director2.jpg";
 // import director3 from "../assets/director3.jpg";
-import Contact from "../ContactPage/ContactPage";
 
 function Bod() {
   return (
@@ -71,7 +70,6 @@ function Bod() {
           and stands as a shining beacon in the realm of education in Kolkata.
         </p>
       </section>
-      <Contact />
     </div>
   );
 }

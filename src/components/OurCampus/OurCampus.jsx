@@ -1,7 +1,5 @@
 import React from "react";
 import "./OurCampus.css";
-import Contact from "../ContactPage/ContactPage";
-
 function OurCampus() {
   return (
     <div>
@@ -76,7 +74,6 @@ function OurCampus() {
           </p>
         </div>
       </div>
-      <Contact />
     </div>
   );
 }

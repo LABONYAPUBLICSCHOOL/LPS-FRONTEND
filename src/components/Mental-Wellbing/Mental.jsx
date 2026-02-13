@@ -1,6 +1,5 @@
 import React from "react";
 import "./Mental.css";
-import Contact from "../ContactPage/ContactPage";
 
 function Mental() {
   return (
@@ -32,7 +31,6 @@ function Mental() {
           life's challenges with courage and optimism.
         </p>
       </div>
-      <Contact />
     </div>
   );
 }

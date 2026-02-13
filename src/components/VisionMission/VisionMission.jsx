@@ -1,7 +1,6 @@
 import React from "react";
 import "./VisionMission.css";
 import banner from "../../assets/Vision-Mission.jpg";
-import Contact from "../ContactPage/ContactPage";
 
 function VisionMission() {
   return (
@@ -57,7 +56,6 @@ function VisionMission() {
         </p>
       </section>
 
-      <Contact />
     </div>
   );
 }

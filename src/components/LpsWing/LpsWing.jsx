@@ -1,6 +1,5 @@
 import React from "react";
 import "./LpsWing.css";
-import Contact from "../../components/ContactPage/ContactPage";
 
 function LpsWing() {
   return (
@@ -118,7 +117,6 @@ function LpsWing() {
     student development.
   </p>
 </div>
-      <Contact />
     </div>
   );
 }

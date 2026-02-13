@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./Curriculum.css";
-import Contact from "../ContactPage/ContactPage";
 
 export default function Curriculum() {
   return (
@@ -37,7 +36,6 @@ export default function Curriculum() {
           milestone!
         </p>
       </motion.div>
-      <Contact />
     </div>
   );
 }
