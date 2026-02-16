@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ContactPage.css";
+import emailjs from "@emailjs/browser";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -23,6 +24,8 @@ function ContactPage() {
     tourTime: "",
     infoSource: "",
   });
+
+  const [loading, setLoading] = useState(false);
 
   const leftRef = useRef(null);
   const rightRef = useRef(null);
@@ -57,8 +60,50 @@ function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    alert("Thank you for your submission! We'll contact you soon.");
+    setLoading(true);
+
+    const templateParams = {
+      student_name: formData.studentName,
+      dob: formData.dob,
+      parents_name: formData.parentsName,
+      phone: formData.phone,
+      whatsapp: formData.whatsapp,
+      email: formData.email,
+      tour_time: formData.tourTime,
+      info_source: formData.infoSource,
+    };
+
+    emailjs
+      .send(
+        "service_2pcb7ku",
+        "template_ihqf119",
+        templateParams,
+        "PEe-aWl9L-0yiWYhs"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Thank you! Your form has been submitted successfully.");
+
+          setFormData({
+            studentName: "",
+            dob: "",
+            parentsName: "",
+            phone: "",
+            whatsapp: "",
+            email: "",
+            tourTime: "",
+            infoSource: "",
+          });
+
+          setLoading(false);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+          alert("Oops! Something went wrong. Please try again.");
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -77,25 +122,10 @@ function ContactPage() {
             <FaPhoneAlt className="contact-icon" /> +91 7439893586
           </p>
           <p>
-            <FaEnvelope className="contact-icon" />{" "}
+            <FaEnvelope className="contact-icon" />
             labonyapublicschool98@gmail.com
           </p>
         </div>
-
-        {/* <div className="contact-info">
-          <p>
-            <FaPhoneAlt className="contact-icon" /> 033 4007 2000
-          </p>
-          <p>
-            <FaPhoneAlt className="contact-icon" /> 033 4007 2444
-          </p>
-          <p>
-            <FaPhoneAlt className="contact-icon" /> 033 4000 5310
-          </p>
-          <p>
-            <FaEnvelope className="contact-icon" /> info@scis.co.in
-          </p>
-        </div> */}
 
         <div className="map-container">
           <iframe
@@ -116,6 +146,7 @@ function ContactPage() {
         <p className="form-sub">Drop us your details for a quick response.</p>
 
         <form className="contact-form" onSubmit={handleSubmit}>
+          {/* Student & DOB */}
           <div className="form-row">
             <div className="form-group">
               <FaUser className="icon" />
@@ -128,6 +159,7 @@ function ContactPage() {
                 required
               />
             </div>
+
             <div className="form-group">
               <FaCalendarAlt className="icon" />
               <input
@@ -141,6 +173,7 @@ function ContactPage() {
             </div>
           </div>
 
+          {/* Parents & Phone */}
           <div className="form-row">
             <div className="form-group">
               <FaUsers className="icon" />
@@ -153,6 +186,7 @@ function ContactPage() {
                 required
               />
             </div>
+
             <div className="form-group">
               <FaPhoneAlt className="icon" />
               <input
@@ -166,6 +200,7 @@ function ContactPage() {
             </div>
           </div>
 
+          {/* WhatsApp & Email */}
           <div className="form-row">
             <div className="form-group">
               <FaWhatsapp className="icon" />
@@ -178,6 +213,7 @@ function ContactPage() {
                 required
               />
             </div>
+
             <div className="form-group">
               <FaEnvelope className="icon" />
               <input
@@ -191,6 +227,7 @@ function ContactPage() {
             </div>
           </div>
 
+          {/* Tour Time */}
           <div className="form-row">
             <div className="form-group full">
               <FaClock className="icon" />
@@ -201,13 +238,17 @@ function ContactPage() {
                 required
               >
                 <option value="">School Tour Time Slot*</option>
-                <option value="10:00 AM - 11:00 AM">11:00 AM - 12:00 PM</option>
-                <option value="12:00 PM - 1:00 PM">12:00 PM - 1:00 PM</option>
-                {/* <option value="2:00 PM - 3:00 PM">2:00 PM - 3:00 PM</option> */}
+                <option value="11:00 AM - 12:00 PM">
+                  11:00 AM - 12:00 PM
+                </option>
+                <option value="12:00 PM - 1:00 PM">
+                  12:00 PM - 1:00 PM
+                </option>
               </select>
             </div>
           </div>
 
+          {/* Source */}
           <div className="form-row">
             <div className="form-group full">
               <FaInfoCircle className="icon" />
@@ -225,8 +266,8 @@ function ContactPage() {
             </div>
           </div>
 
-          <button type="submit" className="submit-btn">
-            SUBMIT
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? "Sending..." : "SUBMIT"}
           </button>
         </form>
       </div>
