@@ -106,20 +106,17 @@ export default function Testimonial() {
     // </section>
     <section className="testimonial-section">
       <hr className="section-divider" />
-      {/* <div className="section-title">Reviews</div> */}
 
-      {/* YOUTUBE VIDEO SECTION START */}
       <div style={{ width: "100%", maxWidth: "900px", aspectRatio: "16/9" }}>
         <iframe
           style={{ width: "100%", height: "100%", borderRadius: "12px" }}
-          src="https://youtu.be/n2in7iVy0ro?si=RT6URSqALcK0vs1l"
+          src="https://www.youtube.com/embed/n2in7iVy0ro"
           title="YouTube video player"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         ></iframe>
       </div>
-      {/* YOUTUBE VIDEO SECTION END */}
     </section>
   );
 }
