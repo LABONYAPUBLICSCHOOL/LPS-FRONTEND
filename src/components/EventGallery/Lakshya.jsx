@@ -16,7 +16,7 @@ function Lakshya() {
     <div className="gallery-page">
       {/* Simple Header */}
       <header className="gallery-header">
-        <h1>Laksh</h1>
+        <h1>Laksh 2024</h1>
       </header>
 
       {/* Tight Grid - No Gap Between Images */}

@@ -5,20 +5,20 @@ import { Link } from "react-router-dom";
 const schoolEvents = [
   {
     id: 1,
-    img: "/Christmas/8.jpeg", 
-    title: "Christmas 2025",
-    link: "/gallery/christmas-2025",
-  },
-  {
-    id: 2,
     img: "/Lakshya/1000028122.JPG",  
     title: "Laksh 2024",
     link: "/gallery/laksh",
   },
+  {
+    id: 2,
+    img: "/Christmas/8.jpeg", 
+    title: "Christmas 2025",
+    link: "/gallery/christmas-2025",
+  },
    {
     id: 3,
     img: "/Republic/1.jpg", 
-    title: "Republic Day",
+    title: "Republic Day 2026",
     link: "/gallery/republic",
   },
    {

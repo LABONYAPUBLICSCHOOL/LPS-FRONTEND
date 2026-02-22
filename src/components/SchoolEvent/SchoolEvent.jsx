@@ -5,37 +5,37 @@ import { Link } from "react-router-dom";
 const events = [
   {
     id: 1,
-    title: "Lakshya 2025",
+    title: "Laksh2025",
     img: "/Lakshya/1000028152.JPG",
     // link: "/events/annual-day",
   },
   {
     id: 2,
-    title: "Lakshya 2025",
+    title: "Laksh 2025",
     img: "/Lakshya/1000028164.JPG",
     // link: "/events/indian-university-fair",
   },
   {
     id: 3,
-    title: "Lakshya 2025",
+    title: "Laksh 2025",
     img: "/Lakshya/1000028158.JPG",
     // link: "/events/prism-2025",
   },
   {
     id: 4,
-    title: "Lakshya 2025",
+    title: "Laksh 2025",
     img: "/Lakshya/1000028250.JPG",
     // link: "/events/international-university-fair",
   },
   {
     id: 5,
-    title: "Lakshya 2025",
+    title: "Laksh 2025",
     img: "/Lakshya/1000028114.JPG",
     // link: "/events/investiture-ceremony",
   },
   {
     id: 6,
-    title: "Lakshya 2025",
+    title: "Laksh2025",
     img: "/Lakshya/1000028140.JPG",
     // link: "/events/sports-meet",
   },
