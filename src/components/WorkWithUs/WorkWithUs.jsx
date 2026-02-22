@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./WorkWithUs.css";
+import emailjs from "@emailjs/browser";
 
 function WorkWithUs() {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ function WorkWithUs() {
     message: "",
   });
 
+  const formRef = useRef(null);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -18,16 +21,28 @@ function WorkWithUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Form submitted successfully!");
-    setFormData({
-      post: "",
-      grade: "",
-      subject: "",
-      name: "",
-      email: "",
-      message: "",
-    });
+
+    emailjs
+      .sendForm(
+        "service_2pcb7ku",
+        "template_3d5857i",
+        formRef.current,
+        "PEe-aWl9L-0yiWYhs"
+      )
+      .then(() => {
+        alert("Application submitted successfully!");
+        setFormData({
+          post: "",
+          grade: "",
+          subject: "",
+          name: "",
+          email: "",
+          message: "",
+        });
+      })
+      .catch(() => {
+        alert("Something went wrong. Please try again.");
+      });
   };
 
   return (
@@ -37,35 +52,26 @@ function WorkWithUs() {
       <p className="description">
         Are you energetic, adaptable and ready to learn? At Labonya Public
         School, we don’t offer just a job — we offer a meaningful and rewarding
-        career. We are looking for teachers who see teaching as a calling, not
-        just a profession
+        career.
       </p>
-      <form className="work-form" onSubmit={handleSubmit}>
+
+      <form ref={formRef} className="work-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-group">
             <label>Post Applying For*</label>
-            <select
-              name="post"
-              value={formData.post}
-              onChange={handleChange}
-              required
-            >
+            <select name="post" value={formData.post} onChange={handleChange} required>
               <option value="">Select</option>
-              <option value="teacher">Teacher</option>
-              <option value="admin">Admin</option>
+              <option value="Teacher">Teacher</option>
+              <option value="Admin">Admin</option>
             </select>
           </div>
+
           <div className="form-group">
             <label>Grade*</label>
-            <select
-              name="grade"
-              value={formData.grade}
-              onChange={handleChange}
-              required
-            >
+            <select name="grade" value={formData.grade} onChange={handleChange} required>
               <option value="">Select</option>
-              <option value="grade1">MALE</option>
-              <option value="grade2">FEMALE</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
             </select>
           </div>
         </div>
@@ -80,8 +86,8 @@ function WorkWithUs() {
               required
             >
               <option value="">Select</option>
-              <option value="math">Math</option>
-              <option value="english">English</option>
+              <option value="Math">Math</option>
+              <option value="English">English</option>
               <option value="Science">Science</option>
               <option value="History">History</option>
               <option value="Geography">Geography</option>
@@ -89,6 +95,7 @@ function WorkWithUs() {
               <option value="Hindi">Hindi</option>
             </select>
           </div>
+
           <div className="form-group">
             <label>Name*</label>
             <input
